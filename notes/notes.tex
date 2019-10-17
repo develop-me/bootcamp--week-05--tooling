@@ -1,0 +1,56 @@
+% setup the document
+\documentclass[b5paper,openany]{book}
+
+% setup variables ------------------------------
+
+% your name
+\newcommand\instructor{Oli Ward}
+
+% the week number
+\newcommand\weekno{5}
+
+% week main title
+\newcommand\maintitle{Tooling}
+
+% week subtitle
+\newcommand\subtitle{with Git, npm and Gulp}
+
+% link to notes - relative to github.com/develop-me/
+\newcommand\github{week-05--tooling/blob/master/notes/}
+
+
+% setup functions, styling, etc.
+\input{../template.tex}
+
+% the structure of the document
+\begin{document}
+
+% render the title page (uses variables above)
+\tp
+
+% a quote page to start
+\quotepage{Some scientists use TeX or LaTeX but for most people Word is the thing that writers use these days}{Miguel de Icaza}
+
+% generate the table of contents
+\tableofcontents
+
+% the standard preface
+\input{../preface.tex}
+
+\chapter{Setup}
+\input{01/00-setup.tex}
+
+\chapter{Introduction to Git}
+\input{01/01-intro.tex}
+
+\chapter{Basics}
+\input{01/02-the-basics.tex}
+
+% an un-numbered chapter
+\nchapter{Glossary}
+\input{glossary.tex}
+
+% standard colophon (uses variables above)
+\input{../colophon.tex}
+
+\end{document}

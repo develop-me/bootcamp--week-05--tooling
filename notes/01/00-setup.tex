@@ -1,0 +1,108 @@
+New computer? Get you.
+\\
+
+Here is a quick setup guide to get you back working with Git.
+\\
+
+\section{Git software}
+
+You might already have git installed, to check run:
+
+\begin{minted}{bash}
+    git --version
+\end{minted}
+
+If you get something like \texttt{git version 2.23.0} then you have Git installed.
+\\
+
+If not, then head over to \href{https://git-scm.com/}{Git's website} and download the tool.
+
+\section{Git repository host: E.g. GitHub}
+
+There are many places you can host your Git project (known as repositories).
+\\
+
+On the Bootcamp we use GitHub.
+
+\subsection{Sign up for an account on GitHub.com}
+
+If you don't already have one, \href{https://github.com/join}{sign up} for an account.
+\\
+
+\subsection{Who are you?}
+
+To avoid you needing to enter your GitHub username and password everytime Git interacts with GitHub we can setup SSH keys.
+\\
+
+To check if these are in place:
+
+\begin{minted}{bash}
+    ssh git@github.com
+\end{minted}
+
+You should get something like this with \texttt{[username]} replaced with your username:
+
+\begin{minted}{http}
+    Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
+\end{minted}
+
+\subsection{SSH access to github.com not working?}
+
+Before you create some new SSH keys, worth checking if you already have some with:
+
+\begin{minted}{bash}
+    tail ~/.ssh/id_rsa.pub
+\end{minted}
+
+If you you get a screen of nonsense like this:
+
+\begin{minted}{http}
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiMYAAHN7k2AS2ygLhxXoFFW68Cv+eQCOEkQkaAaPL7lgZppaoQoQ9Y/k6uky+JLd5BnXCyYV0d6APWWKxKkeE+0OodKdrPN394yBkYIQyOL0Eqsj9CFK06Z1qbWWY/70rLUql0W232eoS8Ct6IHX/kw0d+ePYiGaXKssVwBb8IkdFQ4FZFv+QG7aZHCLWe8wjt0DnQni11XDoG0Jh1Ea/V0MYCzSW71wmACd56HJmkwM4MB9RSrKUevDy14YnK/4Qr14WdDn4vxCueX9ulFEkmPbjDUH8XUi3vGmecDUO+38sgg+BVbbonc23zR+fR9OH6mUPR4+4u3tA/2W8RmJNP+8nMbVj8ttP18GIvp6FKHj6U14w5q+muJKn1Y32KWxhR1phhxACUmihwb9D4cTpcDgpC0QsLKshJn8BUomMZ3K4Vx9CDyfKv/DABr/wQpoMOGnD1gOUkiBNOQTY0e9s+/o4xO4izF+AkGWdSo+FrTEBdH/v+DLNAJR1gG6DtmW1vfuy95d3jpwnT8d3tkEnw2/JDhPNGX3UZQKdzLHstCjG0NlhDXf+M4rqdDSoV9FZ00KCmOjPO4pl4Y93g1WFd3kpyLvqLh4GWvvY3D3MSoVWNifzavSiw9g+rMSbwAh8uUTupHce7Pbodn7joNetQebKWzLXEZNXaaq+a75PVQ== you@email.com
+\end{minted}
+
+If not (you get \texttt{No such file or directory}), then you'll need to generate a new keypair using \href{https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent}{GitHub's suggested process}:\footnote{At the \texttt{Enter passphrase (empty for no passphrase)} step I'd suggest just hitting \texttt{[Enter]} providing no password.}
+
+\begin{minted}{bash}
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+\end{minted}
+
+Replace \texttt{your\_email@example.com} with your own email or comment (this is what the \texttt{-C} flag means; comment).\footnote{You often provide your email or name here as your SSH key may end up in a few places other people may find it. To prevent them removing it erroneously it helps them identify who's key it is and if it is still needed.}
+
+Once you've finished creating your keys, output the public part\footnote{the part ending  \texttt{.pub}, the other part is the private part and should be treated like a password; never shared.} key with:
+
+\begin{minted}{bash}
+    cat ~/.ssh/id_rsa.pub
+\end{minted}
+
+Then add key to your GitHub account in \href{https://github.com/settings/ssh}{your account settings}.
+\\
+
+Finally, test your key with:
+
+\begin{minted}{bash}
+    ssh git@github.com
+\end{minted}
+
+\subsection{Other setup}
+
+
+So that Git knows who your commits are made by:
+\begin{minted}{bash}
+	git config --global core.editor "nano"
+\end{minted}
+\begin{minted}{bash}
+	git config --global --edit
+\end{minted}
+
+Then edit values as required, uncomment (remove \#).
+\\
+
+Then, to save and exit, \texttt{Ctrl}\footnote{It's \texttt{Ctrl} even on a Mac}+\texttt{x}, \texttt{Y} to confirm, and then \texttt{Enter}.
+\\
+
+If you'd like to use Sublime as the editor for Git documents (and you have the subl CLI tool set up), run:
+
+\begin{minted}{bash}
+	git config --global core.editor "subl -n -w"
+\end{minted}
+

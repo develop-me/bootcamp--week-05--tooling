@@ -1,0 +1,84 @@
+\section{Commands}
+
+\subsection{Starting a New Project}
+
+Git won't operate on your project unless you initialise it:
+
+\begin{minted}{bash}
+    git init
+\end{minted}
+
+At this point Git is ready to go, but is not yet tracking (version managing) anything.
+\\
+
+What this command does do is create a hidden local repository folder \texttt{.git}
+\\
+
+This is where Git will store all its information about your project; which files there are, how they have changed over time, etc.
+
+\subsection{Tracking Our First File}
+
+\section{File Lifecycle \& Staging}
+
+Once files are tracked by Git (have been \texttt{git add}ed) then they go through these stages.
+
+\begin{itemize}
+    \item \textbf{Unmodified}: file has no changes from last commit
+    \item \textbf{Modified}: \texttt{git status} reports file has been edited
+    \item \textbf{Staged}: \texttt{git add \{filename\}} has been run to stage the change, ready to go into next commit
+    \item \textbf{Committed/unchanged}: \texttt{git commit ...} creates a new snapshot of those edits, and file goes back to being unchanged (from the last commit we just made)
+\end{itemize}
+
+\img{12cm}{resources/untracked.png}{1em}{Life cycle of tracked files in a Git version managed project}
+
+New files added into the project start off in an untracked state, and need to be staged and committed before Git will track their state.
+
+\subsection{Files with Multiple Statuses}
+
+It is possible to edit a file, stage that change, then make a further change.
+\\
+
+The file will then be in both a staged state (first edit) and a modified state (further edits since first edits were staged).
+\\
+
+\texttt{git status -s} can help us decypher what has gone on here.
+
+It's output:
+
+\begin{minted}{bash}
+ M README.md
+MM index.html
+A  css/styles.css
+M  js/scripts.js
+?? LICENSE.txt
+\end{minted}
+
+\texttt{⌃ } Left column: Staged changes column
+\\
+\texttt{ ⌃} Right column: Unstaged changes column
+\\
+
+\textbf{README.md}
+\\
+File has been edited but those modifications haven't been staged with \texttt{git add README.md} or commited with \texttt{git commit ...} yet.
+
+
+\textbf{index.html}
+\\
+File has been edited, those modifications staged, and then has had further modifications made.
+\\
+
+\textbf{css/styles.css}
+\\
+File has been added into project (it's new) and a \texttt{git add css/styles.css} has been run to add the file into staging. The next \texttt{git commit ...} would add this file to the history.
+\\
+
+\textbf{js/scripts.js}
+\\
+File has been added edited and those modifications staged with \texttt{git add js/scripts.js}.
+\\
+
+\textbf{LICENSE.txt}
+\\
+Untracked file. Possibly new, but has never had \texttt{git add LICENSE.txt} run to start Git tracking it.
+\\

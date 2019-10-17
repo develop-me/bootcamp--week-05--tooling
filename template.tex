@@ -1,0 +1,208 @@
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[bottom,hang,flushmargin]{footmisc}
+\usepackage{framed}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{pagecolor}
+\usepackage{sectsty}
+\usepackage{setspace}
+\usepackage{tabu}
+\usepackage{tikz}
+\usepackage{xcolor}
+
+% margins
+\geometry{
+    b5paper,
+    left=20mm,
+    right=20mm,
+    top=20mm,
+    bottom=20mm,
+    footnotesep=20mm,
+}
+
+% colours
+\definecolor{dm-dark-green}{rgb}{0.2,0.318,0.341}
+\definecolor{dm-red}{rgb}{1,0.188,0.416}
+\definecolor{dm-green-01}{rgb}{0,0.941,0.784}
+\definecolor{dm-green-02}{rgb}{0.216,0.557,0.492}
+\definecolor{dm-light-grey}{rgb}{0.941,0.960,0.949}
+\definecolor{dm-dark-grey}{rgb}{0.341,0.341,0.337}
+
+% define some terms
+\newcommand\notesurl{https://github.com/develop-me/\github}
+
+% set gap before footnotes
+\setlength{\skip\footins}{2em}
+
+% headers
+\pagestyle{plain}
+
+% don't vertically spread
+\raggedbottom
+
+% bold should use main colour
+\let\stdtextbf\textbf
+\renewcommand\textbf[1]{\textcolor{dm-dark-green}{\stdtextbf{#1}}}
+
+\let\stdtexttt\texttt
+\renewcommand\texttt[1]{\textcolor{dm-green-02}{\stdtexttt{#1}}}
+
+% horizontal rule
+\newcommand\hr{\begin{center}\textcolor{dm-green-02}{∞}\end{center}}
+
+% captions
+\newcommand\figcaption[1]{\small\sffamily\textcolor{dm-dark-green}{\newline\newline #1}}
+
+% header colours
+\chapterfont{\normalfont\sffamily\color{dm-dark-green}}
+\sectionfont{\color{dm-dark-green}}
+\subsectionfont{\color{dm-dark-green}}
+\subsubsectionfont{\sc\color{dm-dark-green}}
+
+% list bullet colours
+\renewcommand{\labelitemi}{\textcolor{dm-dark-green}{\textbullet}}
+\renewcommand{\labelitemii}{\textcolor{dm-dark-green}{\textbullet}}
+
+% remove indents
+\setlength{\parindent}{0pt}
+
+% line height
+\renewcommand{\baselinestretch}{1.2}
+
+% figure settings
+\captionsetup{labelformat=empty} % set captions to not include "Figure X:"
+
+% setup fonts
+\color{dm-dark-grey}
+\setmainfont[Ligatures=TeX,ItalicFont=Feijoa-MediumItalic,StylisticSet=6]{Feijoa}
+\setsansfont{Avenir Next}
+\setmonofont{Fira Mono}
+
+% chapter without numbering
+\newcommand{\nchapter}[1]{
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}
+}
+
+% circled text
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=5pt,line width=0.9pt,color=dm-green-01] (char) {#1};}}
+
+% title page command
+\newcommand{\tp}{
+    \newpagecolor{dm-dark-green}
+    \pagenumbering{gobble}
+    \begin{flushright}
+        {\circled{\sffamily\Large\textcolor{dm-light-grey}{\weekno}}}
+    \end{flushright}
+    \vspace{15em}
+    {\sffamily\Huge\textcolor{dm-green-01}{\maintitle}} \\
+    {\rmfamily\large\textcolor{dm-light-grey}{\subtitle}}
+    \restoregeometry
+    \pagebreak
+    \restorepagecolor
+    \pagenumbering{arabic}
+}
+
+% code block styling
+\setminted{
+    frame=lines,
+    framesep=1em,
+    fontsize=\small,
+    rulecolor=dm-green-02,
+    autogobble=true,
+    breaklines=true,
+    startinline=true,
+}
+
+
+\newcommand\githublink[1]{\hfill{\footnotesize[\href{\notesurl#1}{View code on GitHub}]}\par\bigskip}
+
+\let\stdinputminted\inputminted
+\renewcommand\inputminted[2]{\stdinputminted{#1}{#2}\githublink{#2}}
+\newcommand\phpinputminted[1]{\stdinputminted[firstline=3]{php}{#1.php}\githublink{#1.php}}
+
+
+% pdf metadata and link styling
+\hypersetup{
+    colorlinks,
+    linkcolor={dm-red},
+    pdfinfo={
+        Author={\instructor},
+        Title={Week \weekno},
+        Subject={\maintitle\ \subtitle}
+    }
+}
+
+% text frame
+\newmdenv[
+    linecolor=dm-green-02,
+    innertopmargin=1em,
+    innerbottommargin=1em,
+    skipabove=2em,
+    skipbelow=2em,
+]{infoboxframe}
+
+\newenvironment{infobox}[1]{%
+    \begin{infoboxframe}
+    \sffamily
+    \textbf{\textcolor{dm-green-02}{#1}}
+    \\
+
+}%
+{
+    \rmfamily
+    \end{infoboxframe}
+}
+
+\newcommand\quoteinline[2]{
+    \begin{center}
+        \parbox{30em}{
+            \begin{flushleft}
+                \textit{#1}
+            \end{flushleft}
+            \par
+            \begin{flushright}
+                \textcolor{dm-green-02}{- #2}
+            \end{flushright}
+        }
+    \end{center}
+}
+
+% quote pages
+\newcommand\quotepage[2]{
+    \clearpage
+
+    \thispagestyle{empty}
+    \null\vfill
+
+    \quoteinline{#1}{#2}
+
+    \vfill\vfill
+
+    \clearpage
+}
+
+%image
+\newcommand\img[4]{
+    \par\bigskip
+    \begin{minipage}{\textwidth}
+        \begin{center}
+            \includegraphics[width=#1]{#2}
+        \end{center}
+        \begin{center}
+            \vspace*{-4em}
+            \vspace*{#3}
+            \figcaption{#4}
+        \end{center}
+    \end{minipage}
+    \par\bigskip
+}
+
+% set table border colour
+\taburulecolor{dm-dark-green}
