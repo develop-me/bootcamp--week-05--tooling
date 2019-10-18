@@ -3,7 +3,7 @@
 ## Level 1: See if you've got Git installed"
 
 ```bash
-    $ git --version
+$ git --version
 ```
 ## Did you get something like `git version 2.23.0`?
 

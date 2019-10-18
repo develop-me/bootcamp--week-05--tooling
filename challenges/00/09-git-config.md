@@ -21,13 +21,13 @@ Make sure you selected Add to PATH during the installation.
 From the command line, run
 
 ```bash
-	$ git config --global core.editor "code --wait"
+$ git config --global core.editor "code --wait"
 ```
 
 ## So that Git knows who your commits are made by
 
 ```bash
-	$ git config --global --edit
+$ git config --global --edit
 ```
 
 Then edit values as required, uncomment (remove `#`).

@@ -4,6 +4,10 @@ Copy your key and add into your GitHub account in [your account settings](https:
 
 Finally, test your key with:
 
+```bash
+$ ssh git@github.com
+```
+
 You should get something like this with `[username]` replaced with your username:
 
 ```
