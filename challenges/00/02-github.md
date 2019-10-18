@@ -2,4 +2,4 @@
 
 ## [Yes](04-send-username.md)
 
-## [No](03-git-signup.md)
+## [No](03-github-signup.md)

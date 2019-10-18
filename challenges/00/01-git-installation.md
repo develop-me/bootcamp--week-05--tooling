@@ -16,6 +16,6 @@ In ConEmu run:
 
 ## If that doesn't work
 
-Head over to \href{https://git-scm.com/}{Git's website} and download the tool.
+Head over to [Git's website](https://git-scm.com/) and download the tool.
 
 ## [Next level →](02-github.md)
