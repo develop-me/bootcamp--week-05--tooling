@@ -1,0 +1,46 @@
+\section{Creating a new repository}
+
+There can only be one first commit, so consider carefully how it is created.
+
+\subsection{Option 1: first commit on GitHub}
+
+\begin{enumerate}
+    \item create your project repo on GitHub
+    \item choose to "Initialize this repository with a README" \textbf{this is the first commit, adding this file on the remote}
+    \item locally run \texttt{git init}
+    \item connect with GitHub with \texttt{git remote add origin {repository URL}}
+    \item \texttt{git fetch} to get information about the remote repo
+    \item \texttt{git checkout master} to checkout the first commit from GitHub (including your README.md)
+    \item start tracking new files with \texttt{git add {filename}}
+    \item commiting with \texttt{git commit}
+    \item push up your work to GitHub with \texttt{git push}
+\end{enumerate}
+
+\subsection{Option 2: first commit on your computer}
+
+\begin{enumerate}
+    \item create your project repo on GitHub
+    \item DO NOT choose to "Initialize this repository with a README"
+    \item locally run \texttt{git init}
+    \item connect with GitHub with \texttt{git remote add origin {repository URL}}
+    \item \texttt{git add {filename}}
+    \item \texttt{git commit -m "adding my first file"} \textbf{this is the first commit, adding this file on the local}
+    \item \texttt{git push origin master} first commit makes it from local to the remote
+\end{enumerate}
+
+\section{Fewer commands with \texttt{git clone}}
+
+\texttt{git clone {repository URL} {folder to create}}
+
+A great shortcut for setting up a new project folder and connecting with the remote.
+\\
+It is equivalent to running all these commands:
+
+\begin{minted}{bash}
+    mkdir {folder to create}
+    cd {folder to create}
+    git init
+    git remote add origin {repository URL}
+    git fetch
+    git checkout master
+\end{minted}

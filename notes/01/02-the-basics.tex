@@ -18,6 +18,47 @@ This is where Git will store all its information about your project; which files
 
 \subsection{Tracking Our First File}
 
+New files added created the project start off in an untracked state, and need to be staged and committed before Git will track their state in future.
+\\
+
+\begin{minted}{bash}
+    git add {filename}
+\end{minted}
+
+\begin{infobox}{A few \texttt{git add} tricks}
+    \begin{minted}{bash}
+        // add multiple files in one command
+        git add css/file1.css js/file2.js file3.html
+
+        // add all files in a folder
+        git add img/*
+
+        // add all of type
+        git add *.scss
+    \end{minted}
+\end{infobox}
+
+\subsection{Committing Our First File}
+
+Now we've used \texttt{git add} to track a file, we need to commit it.
+
+\begin{minted}{bash}
+    git commit -m "my first commit"
+\end{minted}
+
+\begin{infobox}{\texttt{git commit} arguments}
+    \texttt{m} = Message associated with the changes in the commit
+    \\
+    \texttt{a} = All changed tracked files included in the commit
+    \\
+
+    Example usage, allowing the \texttt{git add} step to be skipped.
+
+    \begin{minted}{bash}
+        git commit -am "my second commit"
+    \end{minted}
+\end{infobox}
+
 \section{File Lifecycle \& Staging}
 
 Once files are tracked by Git (have been \texttt{git add}ed) then they go through these stages.
@@ -30,8 +71,6 @@ Once files are tracked by Git (have been \texttt{git add}ed) then they go throug
 \end{itemize}
 
 \img{12cm}{resources/untracked.png}{1em}{Life cycle of tracked files in a Git version managed project}
-
-New files added into the project start off in an untracked state, and need to be staged and committed before Git will track their state.
 
 \subsection{Files with Multiple Statuses}
 
