@@ -6,7 +6,7 @@ To avoid you needing to enter your GitHub username and password everytime Git in
 ## Check your SSH keys are in place
 
 ```bash
-$ ssh git@github.com
+ssh git@github.com
 ```
 
 You should get something like this with `[username]` replaced with your username:

@@ -1,9 +1,9 @@
 # Choose your own adventure Git Setup
 
-## Level 1: See if you've got Git installed"
+# Level 1: See if you've got Git installed"
 
 ```bash
-$ git --version
+git --version
 ```
 ## Did you get something like `git version 2.23.0`?
 

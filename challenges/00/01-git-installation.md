@@ -3,7 +3,7 @@
 ## Mac
 
 ```bash
-$ brew install git
+brew install git
 ```
 
 ## Windows
@@ -11,7 +11,7 @@ $ brew install git
 In ConEmu run:
 
 ```bash
-$ sudo apt-get install -y git
+sudo apt-get install -y git
 ```
 
 ## If that doesn't work
