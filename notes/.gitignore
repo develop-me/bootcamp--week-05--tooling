@@ -4,3 +4,5 @@
 *.toc
 *.pdf
 **/_minted-notes
+notes.fdb_latexmk
+notes.fls
