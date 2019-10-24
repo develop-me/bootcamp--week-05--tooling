@@ -1,7 +1,7 @@
 md for  quick setup check
 
-$ git --version
-$ ssh git@github.com
+git --version
+ssh git@github.com
 "Hi [username]! You've successfully authenticated, but GitHub does not provide shell access."
 
 - git looks "up the path"
