@@ -1,7 +1,7 @@
 # Week 5: Tooling: Git, npm, Gulp
 
 - Day 1: Git
-    - [Presentation](https://docs.google.com/presentation/d/16H5Rrl2oacWACdv2vRVxsLV1WJ4b_ohusL2tkBEhIYM)
+    - [Presentation](https://docs.google.com/presentation/d/1jIk6_sI-NlVYGlgRoUAvyzPTl9BeE5zXJcgVc6CboD4)
     - [Template Repo](https://github.com/develop-me/git-simple)
     - [Challenges](challenges/01/README.md)
 - Day 2: Git Workflows
