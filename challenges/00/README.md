@@ -1,6 +1,8 @@
 # Choose your own adventure Git Setup
 
-# Level 1: See if you've got Git installed"
+# Level 1: See if you've got Git installed
+
+Run:
 
 ```bash
 git --version
