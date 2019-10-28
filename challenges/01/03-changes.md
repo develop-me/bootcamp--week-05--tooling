@@ -1,6 +1,6 @@
 # Commit changes to already tracked files
 
-1) **Make changes to one of the files**
+1) **Make changes to one of your tracked files**
 
 1) **Commit those changes**
 
@@ -15,3 +15,5 @@
 1) **Make some more changes**
 
     Edit 2 or more files, `git add` and commit the changes.
+
+## [Next challenge](04-info.md)
