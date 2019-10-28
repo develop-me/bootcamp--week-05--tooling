@@ -4,7 +4,7 @@
 
 	Use `cd  {directory name}` and `mkdir {my new folder}` to navigate to where you'd like to make your new directory and make it.
 	\
-	_Protip: you can drag a fie or folder from Finder (Mac) or Explorer (Windows) into terminal to get the path rather than typing the whole path._
+	_Protip: you can drag a file or folder from Finder (Mac) or Explorer (Windows) into terminal to get the full path rather than typing the whole path._
 
 1) **Start to version manage that new folder**
 
