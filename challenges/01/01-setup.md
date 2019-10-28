@@ -27,3 +27,5 @@
 		```
 
 	*Note: Files starting with `.` are often hidden by default in visual/graphical file viewers and on command line*
+
+## [Next challenge](02-track-files.md)
