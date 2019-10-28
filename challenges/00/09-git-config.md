@@ -27,21 +27,8 @@ git config --global core.editor "code --wait"
 ## So that Git knows who your commits are made by
 
 ```bash
-git config --global --edit
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
 ```
-
-Then edit values as required, uncomment (remove `#`).
-
-Good starting point:
-
-```
-[user]
-	name = Your Name
-	email = you@email.com
-[push]
-	default = matching
-```
-
-Then, to save and exit.
 
 ## [Next level →](10-fin.md)
