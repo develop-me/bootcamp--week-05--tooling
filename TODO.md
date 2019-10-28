@@ -6,3 +6,4 @@
 - quiz
 - quiz answers + explanation
 - oh shit resource & exercises
+- git autocomplete setup guide
