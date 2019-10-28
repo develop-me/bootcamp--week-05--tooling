@@ -12,7 +12,7 @@ To practice using Git while working on a project you should:
 - at appropriate points use `git add` and `git commit` to create a snapshot of your progress so far.
 
     This may be after creating each page, or when completing each element, this is up to you.
-- At the end you should aim to have done **at least** 10 commits
+- At the end you should aim to have done **at least** 10 commits (use `git log` to see your commits so far)
 - Aim for clear, informative commit messages.
 
 *Note: Don't worry about making your project perfect, the purpose is to practice using Git.*
