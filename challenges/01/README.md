@@ -1,4 +1,4 @@
-# Git setup Challenges
+# Git day 1 challenges
 
 ---
 
@@ -19,9 +19,3 @@
 1) [Deleting files](08-remove-files.md)
 
 1) [Branches](09-branches.md)
-
-1) [Working with a remote](10-remote-setup.md)
-
-1) [Collaborating](11-collaboration-setup.md)
-
-1) [Push rejection and conflicts](12-push-rejection-conflicts.md)
