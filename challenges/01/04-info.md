@@ -17,3 +17,9 @@
     Study the information and try to relate to the changes you've made and commands you've run.
     \
     *`history` is a good command to know to show recent things you've run*
+
+1) **See differences**
+
+    Make a change to a file, save it and use `git diff` to see how you can use the `diff` tool to see what has changed.
+    \
+    Useful if a `git status` shows things have been modified but you're not sure what or can't remember what you changed.
