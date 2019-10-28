@@ -10,7 +10,9 @@ For each task follow the process:
 
 1) Create a new feature branch
 1) Checkout that branch
+1) Use `git branch -a` to see available branches and which branch you are currently working on
 1) Do work
 1) Commit
-1) Switch back to `master`
-1) Merge your feature branch into `master`
+1) Switch back to `master` with `git checkout master`
+1) Where is your work?
+1) Merge your feature branch into `master` with `git merge {feature branch name}`
