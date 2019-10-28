@@ -13,13 +13,13 @@
 	```
 
 1) **Start version managing your files**
-	\
+
 	Use `git status` to see what Git thinks is going on.
-	\
+
 	Use `git add {filename}` to start tracking the files in your project.
-	\
+
 	Use `git status` again to see what is the status now.
-	\
+
 	Use `git commit -m "Some comment"` to create your first commit, with the files you had previously added to tracking.
 
-## [Next challenge](03-changes.md)
+## [Next challenge >](03-changes.md)
