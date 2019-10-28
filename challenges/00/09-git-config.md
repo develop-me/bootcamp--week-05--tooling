@@ -35,7 +35,7 @@ git config --global user.email "your_email@example.com"
 
 Computers files in our folders sometimes that we don't need to track in our projects.
 
-### Mac
+### Mac
 
 We want to ignore `.DS_Store` files. These files are made by the Mac filesystem to store folder attributes, and are not part of our projects.
 
