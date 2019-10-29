@@ -3,7 +3,10 @@
 - sense check with `git status` often
 - atomic commits: use git commit -a sparingly
 - read error messages
+- post-PR merge: git remote prune origin & git branch -d
 - quiz
 - quiz answers + explanation
 - oh shit resource & exercises
 - git autocomplete setup guide
+
+- update to Bootstrap v4 (or simplify site?)
