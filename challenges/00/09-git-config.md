@@ -31,6 +31,12 @@ git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
 ```
 
+## So that Git knows which branch on the remote to push to
+
+```bash
+git config --global push.default matching
+```
+
 ## So that Git ignores unneccessary files
 
 Computers files in our folders sometimes that we don't need to track in our projects.
