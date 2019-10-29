@@ -7,3 +7,5 @@
 1) preview changes in browser
 
 **DO NOT do `git push` yet**
+
+*Note: the project repository is available on GitHub here: [https://github.com/develop-me/git-simple](https://github.com/develop-me/git-simple)*
