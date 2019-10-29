@@ -1,6 +1,6 @@
 # Collaborating with a remote repository
 
-Continue working on the project, but now use `git push` and `git pull`.
+Continue working on the project, but now start to use `git push` and `git pull`.
 
 Make 5 changes, with 5 commits, while pushing each up to GitHub.
 
