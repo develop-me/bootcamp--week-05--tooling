@@ -1,4 +1,4 @@
-# Collaborating with a remote repository
+# Improving workflow with pull requests
 
 Let's improve our workflow with Pull Requests.
 

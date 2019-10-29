@@ -11,3 +11,5 @@
 1) [Team working: push rejections and conflicts](04-push-rejection-conflicts.md)
 
 1) [Using pull requests in teams](05-team-pull-requests.md)
+
+1) [Working with issues](06-issues.md)
