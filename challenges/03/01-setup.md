@@ -8,7 +8,7 @@ At an appropriate place to create a new project folder run:
 
 `git clone git@github.com:develop-me/gulp-template.git {folder name}`
 
-Git clone does git init and checks out master into new folder called `gulp-practice`.
+Git clone does git init and checks out master into new folder called `{folder name}`.
 
 *Remember: `git clone` will make a new folder wherever you are in terminal, so `cd` to the right place or `pwd` to check where you are.*
 
