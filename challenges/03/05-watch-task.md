@@ -1,5 +1,9 @@
 # Automate your workflow with watching
 
-1) create a task that will automatically run your other tasks in order.
+1) create a task that will watch some files for changes then automatically run some other task(s) for you.
 
-1) test it
+  You'll need a task with something like this:
+
+  `return gulp.watch('./scss/**/*.scss', gulp.series('{task to run}'));`
+
+1) test it with `gulp {name of your watch task}`
