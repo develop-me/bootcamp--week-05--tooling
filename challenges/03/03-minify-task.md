@@ -16,7 +16,7 @@ gulp.task('minify-css', () => {
 1) run that task with `gulp minify-css`
 1) verify it produced a `css/styles.min.css` file
 1) switch your site (HTML) to use that CSS file instead
-1) sense check that it is all working by making a change to `scss/customisations.scss`, like `body{background:red;}` then running both gulp tasks *in the right order*.
+1) sense check that it is all working by making a change to `scss/customisations.scss`, like `body{background:red;}` then running **both** gulp tasks *in the right order* - this is key, think about what is happening to the files in our build process
 1) verify you can see the resulting CSS change in the browser 
 1) :+1: task in Slack
 
