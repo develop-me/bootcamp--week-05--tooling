@@ -87,3 +87,15 @@ Look into, and implement, a gulp plugin that will auto-refresh browser when file
 Suggested plugin: [Browsersync](https://www.browsersync.io/docs/gulp).
 
 **If you get stuck with this [see my sample](https://gist.github.com/oliward/426a6a89bda3d55c614b495431290ba4)**
+
+## Step 7: GitHub Pages
+
+Did you know you can use GitHub to host your site?!
+
+The feature, called GitHub Pages, can be enabled by going to Settings on the project repository and choosing how you want to publish in the "GitHub Pages" section.
+
+You can publish from the master or gh-pages branch, or can have a docs/ folder where you put your built site files.
+
+You can then access your GitHub Pages hosted project at: `<username>.github.io/<repo-name>`
+
+E.g. [oliward.github.io/rainbow-drops/](https://oliward.github.io/rainbow-drops/) (try clicking on the page)
