@@ -11,11 +11,13 @@
 Gulp functions you'll need:
 
 - `src()` - find source files
-- `concat()` - from gulp-concat package to combine files
-- `uglify()` - from gulp-uglify-es package to minify
+- `concat()` - from [gulp-concat](https://www.npmjs.com/package/gulp-concat) package to combine files
+- `uglify()` - from [gulp-uglify-es](https://www.npmjs.com/package/gulp-uglify-es) package to minify
 - `dest()` - save file(s) to destination
 
-## Useful `src()` tips
+*Note: I've linked the package name to the documentation about its usage, you may need to refer to this if you have problems*
+
+## Useful `src()` path tips
 
 `src()`'s argument is a file path, or array of filepaths, for example:
 
@@ -31,4 +33,4 @@ You can also exclude certain files with `!`:
 
 1) Check console for JS errors, if there are any probably problems, fix them
 
-1) Setup/update a watch task for JS files to run entire JS file build pipeline
+1) Setup a watch task for JS files to run entire JS file build pipeline on change
