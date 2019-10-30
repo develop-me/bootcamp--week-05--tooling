@@ -116,3 +116,7 @@ How do you 'throw away' the last commit `bbb123`, going back to the commit befor
 ## 8. Ignore it all!
 
 Create a .gitignore file that will cause Git to only track hello.html in my folder:
+
+![alt text](https://github.com/develop-me/week-05--tooling/raw/master/resources/08.png "Quiz question 8 files")
+
+
