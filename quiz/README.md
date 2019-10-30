@@ -117,7 +117,7 @@ How do you 'throw away' the last commit `bbb123`, going back to the commit befor
 
 Create a `.gitignore` file that will cause Git to only track `hello.html` in my folder:
 
-![alt text](https://raw.githubusercontent.com/develop-me/week-05--tooling/master/quiz/resources/08.png "Quiz question 8 image")
+![Quiz image 8.png](https://raw.githubusercontent.com/develop-me/week-05--tooling/master/quiz/resources/08.png "Quiz question 8 image")
 
 ## 9. Describe the process
 
@@ -142,9 +142,7 @@ What steps should we take and what commands will we need to run?
 
 Our fresh project needs a `.gitignore` file, what should its contents be?
 
-![alt text](https://raw.githubusercontent.com/develop-me/week-05--tooling/master/quiz/resources/11.png "Quiz question 11 image")
-
-
+![Quiz image 11.png](https://raw.githubusercontent.com/develop-me/week-05--tooling/master/quiz/resources/11.png "Quiz question 11 image")
 
 ## 12. Gulp and git
 

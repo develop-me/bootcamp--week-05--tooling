@@ -6,8 +6,9 @@
 	- [Challenges](challenges/01/README.md)
 - Day 2: Git Workflows
 	- [Challenges](challenges/02/README.md)
-- Day 3: npm  & Gulp
+- Day 3: npm & gulp
 	- [Demo](https://github.com/develop-me/gulp-demo)
 	- [Project template](https://github.com/develop-me/gulp-template)
+	- [Challenges](challenges/03/README.md)
 - Day 4: Group Project
 - Day 5: [Quiz](quiz/README.md)
