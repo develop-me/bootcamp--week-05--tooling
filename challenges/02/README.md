@@ -1,4 +1,4 @@
-# Git day 2 challenges
+# Tooling day 2 challenges: Git
 
 ---
 
