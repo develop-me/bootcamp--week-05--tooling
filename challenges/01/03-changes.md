@@ -5,7 +5,7 @@
 1) **Commit those changes**
 
 	Again use `git status` to see what Git thinks is going on.
-    
+	
 	Use `git add {filename}` to stage the change to that file.
 	
 	Use `git status` again to see what is the status now.

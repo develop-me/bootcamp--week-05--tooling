@@ -17,17 +17,19 @@ Gulp functions you'll need:
 
 *Note: I've linked the package name to the documentation about its usage, you may need to refer to this if you have problems*
 
-## Useful `src()` path tips
+## Useful `gulp.src()` path tips
 
-`src()`'s argument is a file path, or array of filepaths, for example:
+`gulp.src()`'s argument is a file path, or array of filepaths, for example:
 
-`src('js/*.js')`
+`gulp.src('js/*.js')` - single file
 
-`src(['js/script1.js', 'js/script2.js'])` - *Note the use of an array `[]` here*
+`gulp.src(['js/script1.js', 'js/script2.js'])` - multiple files. Note the use of an array `[]` here.
 
-You can also exclude certain files with `!`:
+You can use wildcard `*` to match multiple files or folders, and exclude certain files with `!`:
 
-`src(['js/*.js', '!js/not-this-script.js'])`
+`gulp.src(['js/*.js', '!js/not-this-script.js'])`
+
+This approach works with defining file paths for watching files too.
 
 ## Advanced
 

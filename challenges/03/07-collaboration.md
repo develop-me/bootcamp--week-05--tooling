@@ -40,9 +40,9 @@ Each person in the team can now make some changes, start using the gulp tasks, a
 ## Step 3: Setup workflow
 
 1) Implement plugins to handle:
-    - compiling Sass to CSS, and minifying your CSS
-    - JS combining and minification
-    - enforce code style for tabs or spaces
+	- compiling Sass to CSS, and minifying your CSS
+	- JS combining and minification
+	- enforce code style for tabs or spaces
 1) Set up gulp tasks to use these plugins
 1) Building a site, with a defined Git workflow using gulp
 
