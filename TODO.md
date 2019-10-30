@@ -5,16 +5,20 @@
 - atomic commits: use git commit -a sparingly
 - read error messages
 - post-PR merge: git remote prune origin & git branch -d
-- quiz
 - quiz answers + explanation
 - oh shit resource & exercises
 - git autocomplete setup guide
 - simplify git-simple site?
 - Oh Shit, Git as an exercise? Talk? Demo? (see below)
+- difference between git fetch and git pull
+
 
 ## npm/Gulp
 
 gulp built in functions
+
+port 03/00-software-setup.md to pre-Git setup Game
+
 
 Oh shit, I committed and immediately realized I need to make one small change!
 # make your change

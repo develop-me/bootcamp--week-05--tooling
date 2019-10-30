@@ -1,9 +1,9 @@
 # Quiz
 
-## Rules
+## Advice
 
 - Some questions you can setup your own test project directory to match the question setup.
-- Draw from or add into your own notes.
+- Draw from or add to your own notes.
 
 ---
 
@@ -107,7 +107,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 How do you 'throw away' all work since last commit, and revert to how the files were at that moment?
 
-*Note: what humorous website was referenced to help you recover from Git mistakes?*
+*Note: what humorous website was referenced to help you recover from Git mistakes? Oh My Goodness, Git?*
 
 ## 7. (Sort of) Burn it all!
 
@@ -152,6 +152,6 @@ In merging another developer's work we end up with these files having Git confli
 
 ```bash
 /scss/_headings.scss
-/css/styles.min.css
+/css/styles.min.css # produced by a gulp task
 about.html
 ```
