@@ -15,7 +15,9 @@ Gulp functions you'll need:
 - `uglify()` - from [gulp-uglify-es](https://www.npmjs.com/package/gulp-uglify-es) package to minify
 - `dest()` - save file(s) to destination
 
-*Note: I've linked the package name to the documentation about its usage, you may need to refer to this if you have problems*
+*Note: you may need to install some new packages.*
+
+*I've linked the package name to the documentation about its usage, you may need to refer to this if you have problems*
 
 ## Useful `gulp.src()` path tips
 
