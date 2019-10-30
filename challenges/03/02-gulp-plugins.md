@@ -29,11 +29,10 @@ Add your first task:
 
 ```
 gulp.task('sass', function () {
-    var stream = gulp.src('./scss/styles.scss')
-        .pipe(sass())
-        .pipe(rename('styles.css'))
-        .pipe(gulp.dest('./css/'));
-    return stream;
+	return gulp.src('./scss/styles.scss')
+		.pipe(sass())
+		.pipe(rename('styles.css'))
+		.pipe(gulp.dest('./css/'));
 });
 ```
 
