@@ -1,5 +1,13 @@
 # Combine then minify JS files
 
+1) Minify and combine the JS files
+
+1) Update browser to use the new single, minified version
+
+1) :+1: task in Slack
+
+## Reference:
+
 Gulp functions you'll need:
 
 - `src()` - find source files
@@ -18,3 +26,9 @@ Gulp functions you'll need:
 You can also exclude certain files with `!`:
 
 `src(['js/*.js', '!js/not-this-script.js'])`
+
+## Advanced
+
+1) Check console for JS errors, if there are any probably problems, fix them
+
+1) Setup/update a watch task for JS files to run entire JS file build pipeline
