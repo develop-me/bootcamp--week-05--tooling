@@ -8,7 +8,7 @@ tail ~/.ssh/id_rsa.pub
 
 ## Do you you get a screen of nonsense like this:
 
-```
+```bash
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiMYAAHN7k2AS2ygLhxXoFFW68Cv+eQCOEkQka
 AaPL7lgZppaoQoQ9Y/k6uky+JLd5BnXCyYV0d6APWWKxKkeE+0OodKdrPN394yBkYIQyOL0Eqsj9
 CFK06Z1qbWWY/70rLUql0W232eoS8Ct6IHX/kw0d+ePYiGaXKssVwBb8IkdFQ4FZFv+QG7aZHCLW

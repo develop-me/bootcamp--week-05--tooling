@@ -2,7 +2,7 @@
 
 Add this to your `gulpfile.js` to define a new task `minify-css`:
 
-```
+```javascript
 gulp.task('minify-css', () => {
   return gulp.src('css/styles.css')
 	.pipe(cleanCSS({compatibility: 'ie8'}))

@@ -18,7 +18,7 @@ Create a `gulpfile.js` in the project root (next to `package.json`)
 
 Require your gulp dependencies:
 
-```
+```javascript
 let gulp = require('gulp');
 let cleanCSS = require('gulp-clean-css');
 let rename = require('gulp-rename');
@@ -27,7 +27,7 @@ let sass = require('gulp-sass');
 
 Add your first task:
 
-```
+```javascript
 gulp.task('sass', function () {
 	return gulp.src('./scss/styles.scss')
 		.pipe(sass())

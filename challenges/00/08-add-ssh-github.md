@@ -10,7 +10,7 @@ ssh git@github.com
 
 You should get something like this with `[username]` replaced with your username:
 
-```
+```bash
 Hi [username]! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 

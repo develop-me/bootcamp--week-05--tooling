@@ -4,7 +4,7 @@
 
 	Create a basic web project of this sort of structure:
 
-	```text
+	```bash
 	index.html
 	/css
 	   style.css

@@ -22,7 +22,7 @@
 
 	- Run `git status` to see if Git is functioning. If the folder isn't version managed by Git you'll get:
 
-		```
+		```bash
 		fatal: not a git repository (or any of the parent directories): .git
 		```
 
