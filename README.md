@@ -10,4 +10,4 @@
 	- [Demo](https://github.com/develop-me/gulp-demo)
 	- [Project template](https://github.com/develop-me/gulp-template)
 - Day 4: Group Project
-- Day 5: Quiz
+- Day 5: [Quiz](quiz/README.md)
