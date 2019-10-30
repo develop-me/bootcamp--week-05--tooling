@@ -14,11 +14,13 @@ Git clone does git init and checks out master into new folder called `{folder na
 
 ## Tour of the site
 
-A [Bootstrap v4](https://getbootstrap.com/docs/4.3/examples/) site
+Open `index.html` in the browser.
+
+This is a [Bootstrap v4](https://getbootstrap.com/docs/4.3/examples/) site.
 
 Uses Sass, compiles `scss/styles.scss` to `css/styles.css`, from many Sass files
 
 Uses some JavaScript files (see bottom of `index.html`):
-- `js/jquery-3.2.1.slim.js`
+- `js/jquery-3.3.1.slim.js`
 - `js/popper.js`
 - `js/bootstrap.js`
