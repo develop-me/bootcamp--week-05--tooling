@@ -10,6 +10,7 @@ Steps:
 1) [Best practice](#step-4-best-practice)
 1) [Minify HTML](#step-5-minify-html)
 1) [Auto-refresh browser](#step-6-auto-refresh-browser)
+1) [GitHub Pages](#step-7-github-pages)
 
 ## Step 1: Planning
 
