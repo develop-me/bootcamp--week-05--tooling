@@ -14,6 +14,10 @@ Or, you can do them all at once with:
 
 ## Setup your gulpfile.js
 
+Create a `gulpfile.js` in the project root (next to `package.json`)
+
+Require your gulp dependencies:
+
 ```
 let gulp = require('gulp');
 let cleanCSS = require('gulp-clean-css');
@@ -32,3 +36,11 @@ gulp.task('sass', function () {
     return stream;
 });
 ```
+
+## Run your first gulp task
+
+1) Make a change to scss/customisations.scss 
+
+1) Run `gulp sass`
+
+1) Verify it updated `css/styles.css` with your change
