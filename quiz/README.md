@@ -117,6 +117,41 @@ How do you 'throw away' the last commit `bbb123`, going back to the commit befor
 
 Create a .gitignore file that will cause Git to only track hello.html in my folder:
 
-![alt text](https://github.com/develop-me/week-05--tooling/raw/master/resources/08.png "Quiz question 8 files")
+![alt text](https://github.com/develop-me/week-05--tooling/raw/master/resources/08.png "Quiz question 8 image")
 
+## 9. Describe the process
 
+You're working in a team that uses gitflow.
+
+Document the steps, and git commands, from starting a new piece of work, to submitting it as a pull request like this:
+
+```bash
+git command1
+git command2
+git command3
+...
+```
+
+## 10. npm & gulp
+
+We're starting working on a new project and want to bring in some of our favourite workflow from a previous project.
+
+What steps should we take and what commands will we need to run?
+
+## 11. Git, npm & gulp
+
+Our fresh project needs a `.gitignore` file, what should its contents be?
+
+![alt text](https://github.com/develop-me/week-05--tooling/raw/master/resources/11.png "Quiz question 11 image")
+
+## 12. Gulp and git
+
+Our project uses gulp tasks to compile our source sass files into a `styles.min.css` file.
+
+In merging another developer's work we end up with these files having Git conflicts, what should we do to resolve each?:
+
+```bash
+/scss/_headings.scss
+/css/styles.min.css
+about.html
+```
