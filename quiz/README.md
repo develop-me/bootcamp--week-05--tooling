@@ -83,5 +83,36 @@ b) What has gone wrong?
 
 c) What should I do next?
 
-## 5. Reading Git messages: Oh noes #2
+## 5. Reading Git messages: Oh noes #3
 
+a) What command have I just run?
+
+b) What has gone wrong?
+
+c) What should I do next?
+
+```bash
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 3), reused 5 (delta 3), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From github.com:develop-me/git-simple
+   a657ab7..d6b1aa1  master     -> origin/master
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+## 6. Burn it all!
+
+How do you 'throw away' all work since last commit, and revert to how the files were at that moment?
+
+*Note: what humorous website was referenced to help you recover from Git mistakes?*
+
+## 7. (Sort of) Burn it all!
+
+How do you 'throw away' the last commit `bbb123`, going back to the commit before last `aaa123`, but keep the files as they are (i.e. the changes as they are respresentated in commit `bbb123`), to not lose that work.
+
+## 8. Ignore it all!
+
+Create a .gitignore file that will cause Git to only track hello.html in my folder:
