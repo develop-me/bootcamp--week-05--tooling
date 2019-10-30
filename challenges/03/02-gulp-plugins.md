@@ -44,3 +44,11 @@ gulp.task('sass', function () {
 1) Run `gulp sass`
 
 1) Verify it updated `css/styles.css` with your change
+
+1) :+1: task in Slack
+
+## Advanced
+
+1) Add more SCSS files into the process
+
+1) Verify their CSS is being included in `css/styles.css`

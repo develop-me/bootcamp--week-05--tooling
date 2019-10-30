@@ -4,4 +4,11 @@
   You'll need a task with something like this:
   \
   `return gulp.watch('./scss/**/*.scss', gulp.series('{task to run}'));`
+
 1) test it with `gulp {name of your watch task}`
+
+1) :+1: task in Slack
+
+## Advanced
+
+1) Setup a watch task for JS files

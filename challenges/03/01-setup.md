@@ -14,7 +14,7 @@ Git clone does git init and checks out master into new folder called `{folder na
 
 ## Tour of the site
 
-Open `index.html` in the browser.
+Open `index.html` in the browser and have a review of the site.
 
 This is a [Bootstrap v4](https://getbootstrap.com/docs/4.3/examples/) site.
 
@@ -24,3 +24,5 @@ Uses some JavaScript files (see bottom of `index.html`):
 - `js/jquery-3.3.1.slim.js`
 - `js/popper.js`
 - `js/bootstrap.js`
+
+:+1: task in Slack

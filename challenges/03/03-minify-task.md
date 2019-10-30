@@ -22,7 +22,6 @@ gulp.task('minify-css', () => {
 
 ## Advanced
 
-1) Add another SCSS file into the process
 1) Make some more pages for your site
 1) Link to them in the menu
 1) Continue to develop your site
