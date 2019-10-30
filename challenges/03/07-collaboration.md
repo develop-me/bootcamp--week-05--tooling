@@ -6,7 +6,10 @@ Steps:
 
 1) [Planning](#step-1-planning)
 1) [Getting Set Up](#step-2-getting-set-up)
-
+1) [Setup workflow](#step-3-setup-workflow)
+1) [Best practice](#step-4-best-practice)
+1) [Minify HTML](#step-5-minify-html)
+1) [Auto-refresh browser](#step-6-auto-refresh-browser)
 
 ## Step 1: Planning
 
