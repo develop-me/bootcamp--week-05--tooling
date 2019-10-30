@@ -39,7 +39,7 @@ gulp.task('sass', function () {
 
 ## Run your first gulp task
 
-1) Make a change to scss/customisations.scss 
+1) Make a change to `scss/customisations.scss`
 
 1) Run `gulp sass`
 
