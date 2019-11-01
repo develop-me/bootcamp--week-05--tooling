@@ -14,9 +14,13 @@ What does this command do?
 `git remote add origin git@github.com:develop-me/drupal1.git`
 
 Think about what each of these parts tells us:
+
 a) `git remote add origin`
+
 b) `git@github.com`
+
 c) `develop-me`
+
 d) `drupal1.git`
 
 
