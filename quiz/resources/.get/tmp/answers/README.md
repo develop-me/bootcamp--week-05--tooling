@@ -5,8 +5,11 @@
 This sets up a relationship between an (existing) local repository and the remote repository at the given origin URL.
 
 a) This is the part that sents the configuration to link to the remote repo.
+
 b) The remote repo is hosted on github.com (could be bitbucket.org, gitlab.com or any other Git repository host)
+
 c) The repo is owned by the user or organisation `develop-me`
+
 d) The project repository name or address is `drupal1`
 
 ## 2. Committing files
