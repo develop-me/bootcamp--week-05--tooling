@@ -107,7 +107,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 How do you 'throw away' all work since last commit, and revert to how the files were at that moment?
 
-*Note: what humorous website was referenced to help you recover from Git mistakes? Oh My Goodness, Git?*
+*Note: think about using [ohshitgit.com](https://ohshitgit.com/) to help you recover from Git mistakes.*
 
 ## 7. (Sort of) Burn it all!
 
@@ -121,9 +121,9 @@ Create a `.gitignore` file that will cause Git to only track `hello.html` in my 
 
 ## 9. Describe the process
 
-You're working in a team that uses gitflow.
+You're working in a team that uses the gitflow workflow.
 
-Document the steps, and git commands, from starting a new piece of work, to submitting it as a pull request like this:
+Document the steps, and git commands, from starting a new piece of work on a new feature branch, to submitting it as a pull request like this:
 
 ```bash
 git command1
@@ -134,9 +134,11 @@ git command3
 
 ## 10. npm & gulp
 
-We're starting working on a new project and want to bring in some of our favourite workflow from a previous project.
+We're starting working on a new project and want to bring in some of our favourite gulp workflow from a previous project.
 
 What steps should we take and what commands will we need to run?
+
+*Note: this idea is to save work starting a new project by re-using a setup you've made before*
 
 ## 11. Git, npm & gulp
 
