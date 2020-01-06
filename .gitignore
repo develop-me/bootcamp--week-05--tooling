@@ -4,5 +4,6 @@
 *.toc
 *.pdf
 **/_minted-notes
+.brokdb
 notes.fdb_latexmk
 notes.fls
