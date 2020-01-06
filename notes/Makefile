@@ -1,5 +1,5 @@
 # the template files
-templates := $(shell find ../ -depth 1 -type f -name "*.tex")
+templates := $(shell find ../../latex-templates -type f -name "*.tex" -depth 1)
 
 # the tex files in this directory (and any below)
 tex := $(shell find . -type f -name "*.tex")
