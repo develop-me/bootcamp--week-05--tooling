@@ -29,3 +29,8 @@
 	Make a change to a file, save it and use `git diff` to see how you can use the `diff` tool to see what has changed.
 
 	Useful if a `git status` shows things have been modified but you're not sure what or can't remember what you changed.
+
+
+## Extra challenge
+
+Read the notes PDF box on "git commit arguments" and experiment with the `-a` flag in `git commit -am`
