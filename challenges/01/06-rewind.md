@@ -11,8 +11,6 @@
 	
 1) **Go back to most recent commit**
 
-	If you used `git checkout {ref}` you can use `git checkout master` or `git switch -` to get back to the most recent commit.
-
-	If you used the `HEAD{n}` method you can do `git checkout HEAD` to get back to the most recent commit.
+	Use `git checkout master` or `git switch -` to get back to the most recent commit.
 
 *`HEAD~` is a shorthand reference for previous commit, as in "one commit ago".*
