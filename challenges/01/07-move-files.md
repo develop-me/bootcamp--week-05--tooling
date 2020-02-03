@@ -14,3 +14,5 @@
 	Use `git status` again to see what Git thinks has just happened.
 	
 	Commit the change.
+
+## [Next challenge >](08-remove-files.md)
