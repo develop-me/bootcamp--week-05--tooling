@@ -2,6 +2,10 @@
 
 1) **Remove a file from tracking but keep the file**
 
+	Create a new file if you like, `git add` and `git commit it`.
+
+	Then:
+
 	`git rm --cached {file path}`
 	
 1) **Add the file path to a `.gitignore` file**
@@ -15,6 +19,10 @@
 	Use `git status` to see what Git thinks is going on, then commit the change to the project.
 
 1) **Remove a file from tracking and delete the file**
+
+	Create a new file if you like, `git add` and `git commit it`.
+
+	Then:
 
 	Use `git rm {file path}`
 	
