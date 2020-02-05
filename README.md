@@ -7,6 +7,7 @@
 - Day 2: Git Workflows
 	- [Challenges](challenges/02/README.md)
 - Day 3: npm & gulp
+	- [Presentation](https://docs.google.com/presentation/d/14OUK0DxYC-gkO7L1UVYJEbX5kJx_0Bc4lwZkh3Txl9Q)
 	- [Demo](https://github.com/develop-me/gulp-demo)
 	- [Project template](https://github.com/develop-me/gulp-template)
 	- [Challenges](challenges/03/README.md)
