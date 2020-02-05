@@ -12,6 +12,10 @@
 - Oh Shit, Git as an exercise? Talk? Demo? (see below)
 - difference between git fetch and git pull
 
+Notes:
+- rm or mv files
+- unstaging a file `git restore --stage {filename}`
+
 
 ## npm/Gulp
 
