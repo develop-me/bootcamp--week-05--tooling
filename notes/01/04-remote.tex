@@ -34,6 +34,7 @@ There can only be one first commit, so consider carefully how it is created.
 
 A great shortcut for setting up a new project folder and connecting with the remote.
 \\
+
 It is equivalent to running all these commands:
 
 \begin{minted}{bash}
@@ -44,3 +45,37 @@ It is equivalent to running all these commands:
     git fetch
     git checkout master
 \end{minted}
+
+\section{Pushing a branch to remote repository}
+
+When working with branches locally (common to a feature branching workflow) you'll often want to get those branches onto the remote.
+
+\begin{minted}{bash}
+    git checkout master # optionally going back to master branch at the beginning
+    git branch my-feature-branch # create your feature branch
+    git checkout my-feature-branch # switch to working on that branch
+    # [do work] = make your code changes
+    git commit -am "commit message" # commit onto your feature branch
+    git push origin my-feature-branch # create branch on the remote and push commits up to it
+\end{minted}
+
+git branch --set-upstream-to=origin/master master
+
+
+Pull requests
+
+
+cleanup
+
+delete from remote (GitHub)
+git checkout master and pull
+git branch -d my-feature-branch
+git branch -a
+git remote prune origin
+
+
+\begin{infobox}{\texttt{git fetch} vs. \texttt{git pull}}
+    What is the difference?
+
+    \texttt{git pull} is in effect a \texttt{git fetch} then a \texttt{git checkout}, going to the remote and fetching any changes, then applying (or checking out) those changes to your version of the files.
+\end{infobox}
