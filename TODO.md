@@ -1,3 +1,5 @@
+- combine setup 00 challenges into 1 (so npm, gulp doesn't need doing mid-week)
+
 ## Git
 - git looks "up the path"
 - best practices

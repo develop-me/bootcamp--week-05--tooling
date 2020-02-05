@@ -10,7 +10,7 @@ v12.10.0
 
 Else run:
 
-### Mac
+### Mac
 
 ```bash
 brew install node
@@ -29,7 +29,7 @@ sudo apt-get install -y nodejs
 Expect something like:
 
 ```bash
-6.12.0
+6.13.4
 ```
 
 ## Run `gulp -v`
@@ -37,8 +37,8 @@ Expect something like:
 Expect something like:
 
 ```bash
-[09:44:18] CLI version 1.4.0
-[09:44:18] Local version 3.9.1
+CLI version: 2.2.0
+Local version 3.9.1 (or might be Unknown)
 ```
 
 Else run:
