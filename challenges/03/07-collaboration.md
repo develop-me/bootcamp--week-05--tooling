@@ -34,7 +34,7 @@ Plan your website's purpose in your team.
 
 1) Install dependencies from `package.json` with `npm install`
 
-### Start work
+### Start work
 
 Each person in the team can now make some changes, start using the gulp tasks, and commit and push changes to GitHub
 
