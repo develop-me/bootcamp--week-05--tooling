@@ -1,6 +1,6 @@
 - combine setup 00 challenges into 1 (so npm, gulp doesn't need doing mid-week)
 
-## Git
+## Git
 - git looks "up the path"
 - best practices
 - sense check with `git status` often
