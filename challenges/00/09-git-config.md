@@ -47,8 +47,8 @@ We want to ignore `.DS_Store` files. These files are made by the Mac filesystem 
 
 ```bash
 touch ~/.gitignore
-echo ".DS_Store" > ~/.gitignore_global
-echo "*.code-workspace" > ~/.gitignore_global
+echo ".DS_Store" >> ~/.gitignore_global
+echo "*.code-workspace" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
@@ -58,8 +58,8 @@ In ConEmu:
 
 ```bash
 touch ~/.gitignore
-echo "Thumbs.db" > ~/.gitignore_global
-echo "*.code-workspace" > ~/.gitignore_global
+echo "Thumbs.db" >> ~/.gitignore_global
+echo "*.code-workspace" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
