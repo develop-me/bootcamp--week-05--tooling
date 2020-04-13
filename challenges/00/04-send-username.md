@@ -1,5 +1,5 @@
-# Level 4: Send your GitHub username to Oli on Slack
+# Level 4: Send your GitHub username to Hannah on Slack
 
-@oliward
+@hannah
 
 ## [Next level →](05-ssh-authentication.md)
