@@ -22,6 +22,6 @@
 
 	Use `git status` again to see what is the status now.
 
-	Use `git commit -m "Some comment"` to create your first commit, with the files you had previously added to tracking.
+	Use `git commit -m "A meaningful commit message"` to create your first commit, with the files you had previously added to tracking.
 
 ## [Next challenge >](03-changes.md)
