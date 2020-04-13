@@ -5,7 +5,7 @@
 	
 	Choose a commit to go back to (rewind) and check it out. 
 
-	This can be done by referencing the commit reference `git checkout {ref}` or using the `git checkout HEAD{n}` syntax to go back `n` commits.
+	This can be done by referencing the commit reference `git checkout {ref}` or using the `git checkout HEAD~{n}` syntax to go back `n` commits.
 
 	Check the files are in the state you expect, i.e. old versions.
 	
