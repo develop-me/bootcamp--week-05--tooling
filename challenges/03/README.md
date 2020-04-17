@@ -4,9 +4,9 @@
 
 1) [01-setup.md](01-setup.md)
 
-1) [02-gulp-plugins.md](02-gulp-plugins.md)
+1) [02-minify-task.md](02-minify-task.md
 
-1) [03-minify-task.md](03-minify-task.md)
+1) [03-gulp-sass.md](03-gulp-sass.md)
 
 1) [04-series-tasks.md](04-series-tasks.md)
 
