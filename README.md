@@ -1,5 +1,7 @@
 # Week 5: Tooling: Git, npm, Gulp
 
+Tooling: doing things better, faster, smarter
+
 - Day 1: Git
 	- [Presentation](https://docs.google.com/presentation/d/15Z03saKItEj1Tc5d__tXk3uIguPqHvcFIA1Bd2WUffs/edit?usp=sharing)
 	- [Template Repo](https://github.com/develop-me/git-simple)
