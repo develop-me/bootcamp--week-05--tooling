@@ -63,4 +63,4 @@ echo "*.code-workspace" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
-## [Next level →](10-fin.md)
+## [Next level →](10-node-check.md)
