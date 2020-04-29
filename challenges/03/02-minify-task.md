@@ -2,6 +2,7 @@
 
 For this task we're going to need to install:
 
+- gulp
 - gulp-clean-css
 - gulp-rename
 
@@ -9,7 +10,7 @@ We can do this by running `npm install {package name}` for each.
 
 Or, you can do them all at once with:
 
-`npm install {package1} {package2}`
+`npm install {package1} {package2} {package3}`
 
 ## Setup your gulpfile.js
 
