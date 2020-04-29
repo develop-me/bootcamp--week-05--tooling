@@ -2,7 +2,7 @@
 
 1) Minify and combine the JS files
 
-1) Update browser to use the new single, minified version
+1) Update your site files to use the new single, minified version
 
 1) :+1: task in Slack
 
