@@ -14,3 +14,11 @@
 	Use `git checkout master` or `git switch -` to get back to the most recent commit.
 
 *`HEAD~` is a shorthand reference for previous commit, as in "one commit ago".*
+
+## Advanced
+
+1) Roll back to a previous commit
+1) Make some changes to your files
+1) Try and commit those changes
+1) You will find you can't - why is this?
+
