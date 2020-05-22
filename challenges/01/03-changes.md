@@ -10,7 +10,7 @@
 	
 	Use `git status` again to see what is the status now.
 	
-	Use `git commit -m "Some comment"` to create your first commit, with the files you had previously added to tracking.
+	Use `git commit -m "A useful comment"` to create your next commit, with the files you had previously added to tracking.
 
 1) **Make some more changes**
 

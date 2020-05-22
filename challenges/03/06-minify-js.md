@@ -2,7 +2,7 @@
 
 1) Minify and combine the JS files
 
-1) Update browser to use the new single, minified version
+1) Update your site files to use the new single, minified version
 
 1) :+1: task in Slack
 
@@ -38,3 +38,5 @@ This approach works with defining file paths for watching files too.
 1) Check console for JS errors, if there are any probably problems, fix them
 
 1) Setup a watch task for JS files to run entire JS file build pipeline on change
+
+1) Explore the use of gulp.parallel() to have your CSS and JS files being watched for changes in the same task. [More info](https://fettblog.eu/gulp-4-parallel-and-series/)

@@ -73,6 +73,7 @@ The `--hard` means get rid of changes, allows it to lose work.
 
 `--soft` means keep the changed files, `HEAD~` means go back one before the current commit.
 
+
 ## 8. Ignore it all!
 
 Neatest `.gitignore` file:

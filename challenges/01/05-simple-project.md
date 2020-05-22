@@ -14,5 +14,6 @@ To practice using Git while working on a project you should:
 	This may be after creating each page, or when completing each element, this is up to you.
 - At the end you should aim to have done **at least** 10 commits (use `git log` to see your commits so far)
 - Aim for clear, informative commit messages.
+- You will be asked to share your commit messages on Slack.
 
 *Note: Don't worry about making your project perfect, the purpose is to practice using Git.*
