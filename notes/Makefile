@@ -11,7 +11,7 @@ source := $(shell find ./resources -type f)
 # make sure to use a tab (not spaces) for the commands below
 notes.pdf: $(templates) $(tex) $(source)
 	# build using xelatex
-	xelatex --halt-on-error --shell-escape notes.tex
+	xelatex -file-line-error --halt-on-error --shell-escape notes.tex && xelatex --shell-escape notes.tex
 
 	# open preview in the background
 	open -g notes.pdf
