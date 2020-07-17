@@ -8,11 +8,12 @@
 
 1) **Start to version manage that new folder**
 
-	Use `git init` inside your new folder (`cd` into the folder first!)  to start version managing the project.
+	`cd` into your new directory first
+	Use `git init` inside your new folder to start version managing the project.
 
 1) **Check your Git repository is in place**
 
-	Verify the `.git` directory has been created and Git is ready to go.
+	Verify the `.git` directory has been created inside your project directory - this tells you that Git is ready to go.
 
 	There are a few ways of doing this:
 	

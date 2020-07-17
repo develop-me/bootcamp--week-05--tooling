@@ -1,4 +1,6 @@
-# Methods to see what's happening
+# Moving between commits
+
+There are times when we may need to view or even work from the files in our older commits. Perhaps because we need to compare the code to fix some broken code.
 
 1) **Common sense check**
 
