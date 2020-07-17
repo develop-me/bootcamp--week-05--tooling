@@ -1,34 +1,87 @@
-\quoteinline{git gets easier once you get the basic idea that branches are homeomorphic endofunctors mapping submanifolds of a Hilbert space}{Isaac Wolkerstorfer(\href{https://twitter.com/agnoster/status/44636629423497217}{@agnoster})}
+\section{Is understanding version management important?}
 
-\section{What is Git?}
+Building and maintaining code can be a complicated process, especially when you have a complex code base and/or many people involved.
+\\
 
-A tool, a piece of software that allows us to:
+Knowing how to version manage a code base is an essential skillset for any professional developer. 
+\\
+
+\textbf{It's worth the learning curve, trust us on this one!}
+
+
+\section{Why is version management an important skillset?}
+\subsection{The nature of developing solutions with code}
+
+Good code products are usually created \textbf{iteratively}. This means you tend to make many small improvements that layer on top of one another. A bit like an onion.
+
+\pagebreak
+
+\begin{infobox}{Iterative and incremental development}
+	\quotepage{The basic idea behind this method is to develop a system through repeated cycles (iterative) and in smaller portions at a time (incremental), allowing software developers to take advantage of what was learned during development of earlier parts or versions of the system.}{Wikipedia}
+\end{infobox}
+
+The part about building on what you have learned is really important. Coding is always a learning process, even when you are at senior level. It is normal to \textbf{get things wrong a few times before you get it right}, and in order to do that you often need to experiment with solutions.
+\\
+
+And once built, code very rarely stands still. It will need continuous attention to manage it. Such as:
+
+\begin{itemize}
+    \item Adding new features to respond to customer needs
+    \item Fixing bugs
+    \item Improving performance and efficiency
+    \item Maintaining security
+\end{itemize}
+
+These tasks are likely to involve changes across lots of files, and we'll usually want to keep track of:
+
+\begin{itemize}
+    \item What files have been changed
+    \item When files were changed
+    \item Why files were changed (ew feature, bug fix etc)
+\end{itemize}
+
+When working in teams, it's usually helpful to also know:
+
+\begin{itemize}
+    \item Who created what code
+    \item Who reviewed, approved and dealt with code conflicts
+    \item What future changes are being worked on
+\end{itemize}
+
+There's a lot to keep on top of isn't there? Often a lot of this will be happening at the same time as well.
+\\
+
+A strong approach to version management can help make all this stuff a whole bunch easier and ultimately allow you to spend more time coding and less on admin.
+
+\subsection{Approaches to version managing code}
+
+It is possible to version manage your code without tools, using manual approaches. But manual approaches are error prone and time consuming - boo!
+\\ 
+
+Approaches to manual version management may include some or all of these:
+
+\begin{itemize}
+    \item Duplicating specific files and renaming them
+    \item Copying a whole folder or project and renaming it with a timestamp, eg taking a backup
+    \item Creating a changelog for each file
+\end{itemize}
+
+But we're developers. And developers specialise in using and creating tools to make things quicker and easier. So let's look at what tools we can make use of. 
+
+
+
+\section{Introducing Git?}
+
+Git is a software tool that automates much of the version management process for us. It can:
 
 \begin{itemize}
     \item keep track of how files change over time (our code)
     \item can be used to version manage anything (text files, video, images)
-    \item mainly used on command line, but GUI's are available
+    \item mainly used on command line, but GUIs are available
 \end{itemize}
 
-\begin{infobox}{Life is hard!}
-    Developing websites/apps/software that works is a hard enough challenge as it is, why add another tool to that?
-    \\
 
-    In the long run it's worth it, trust us.
-\end{infobox}
-
-\section{Why version manage?}
-
-Version management affords us:
-
-\begin{itemize}
-    \item Control
-    \item Visibility
-    \item Predictability
-    \item Collaboration
-\end{itemize}
-
-\section{Why Git?}
+\subsection{Why Git?}
 
 There are many version management tools out there, why do we use Git?
 \\
@@ -36,10 +89,17 @@ There are many version management tools out there, why do we use Git?
 Each has its own quirks, and merits in its design.
 \\
 
-Ultimately we use Git because others use it:
+Ultimately we use Git because:
 
 \begin{itemize}
-    \item most widely used source code management tool
+    \item it is the most widely used source code management tool
 	\item 33.3\% of professional software developers reporting use Git or GitHub as their primary source control system
 	\item excellent tooling support, supporting existing workflows and editors like VSCode, Sublime
+\end{itemize}
+
+
+\section{Additional resources}
+
+\begin{itemize}[leftmargin=*]
+    \item \href{https://en.wikipedia.org/wiki/Iterative_and_incremental_development}{Wikipedia - iterative and incremental development }
 \end{itemize}
