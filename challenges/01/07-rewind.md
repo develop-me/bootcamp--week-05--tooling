@@ -24,5 +24,3 @@
 1) Try and commit those changes
 1) You will find you can't - why is this?
 
-## [Next challenge >](07-move-files.md)
-

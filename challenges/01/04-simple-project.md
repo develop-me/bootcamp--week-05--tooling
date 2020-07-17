@@ -21,5 +21,11 @@ At appropriate points use `git add` and `git commit` to create a snapshot of you
 - Share a summary of your commit messages on Slack.
 
 ### Stretch challenges
-- if you have time add some CSS styling
+Only attempt these once you have done all of the above.
+
+If you have time you could:
+
+- add some CSS styling
 - experiment with the -a flag in git commit -am (in the notes PDF box on "git commit arguments")
+- complete the [Moving files the git way challenge >](05-move-files.md)
+- complete the [Deleting files the git way challenge >](06-remove-files.md)

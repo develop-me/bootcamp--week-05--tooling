@@ -1,6 +1,6 @@
 # Moving/renaming files
 
-This is an advanced task - if you have questions or help please ask your instructor or TA for help outside of the main lectures.
+This is an advanced task - if you have questions or help please ask your instructor or TA for help outside of the main lectures. The main class will not wait whilst you attempt these.
 
 1) **Use `git mv {old-path} {new-path}` to relocate a file**
 	This stages that change at the same time.
@@ -17,4 +17,4 @@ This is an advanced task - if you have questions or help please ask your instruc
 	
 	Commit the change.
 
-## [Next challenge >](08-remove-files.md)
+## [Next challenge >](06-remove-files.md)
