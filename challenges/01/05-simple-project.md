@@ -16,10 +16,10 @@ At appropriate points use `git add` and `git commit` to create a snapshot of you
 
 *Note: Don't worry about making your web pages perfect, the purpose is to practice using Git.*
 
-### Advanced
-- if you have time add some CSS styling
-- experiment with the -a flag in git commit -am (in the notes PDF box on "git commit arguments")
-
 ### After you have finished
 - Emoji the task on Slack so the instructor knows you have finished.
 - Share a summary of your commit messages on Slack.
+
+### Stretch challenges
+- if you have time add some CSS styling
+- experiment with the -a flag in git commit -am (in the notes PDF box on "git commit arguments")
