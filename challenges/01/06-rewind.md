@@ -15,10 +15,14 @@
 
 *`HEAD~` is a shorthand reference for previous commit, as in "one commit ago".*
 
+1) **Add an emoji to slack to let the instructor know you have finished**
+
 ## Advanced
 
 1) Roll back to a previous commit
 1) Make some changes to your files
 1) Try and commit those changes
 1) You will find you can't - why is this?
+
+## [Next challenge >](07-move-files.md)
 

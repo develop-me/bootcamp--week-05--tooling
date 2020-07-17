@@ -1,5 +1,7 @@
 # Moving/renaming files
 
+This is an advanced task - if you have questions or help please ask your instructor or TA for help outside of the main lectures.
+
 1) **Use `git mv {old-path} {new-path}` to relocate a file**
 	This stages that change at the same time.
 	
