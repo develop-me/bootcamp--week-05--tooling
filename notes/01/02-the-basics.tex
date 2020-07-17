@@ -1,25 +1,114 @@
-\section{Commands}
+\section{Basic concepts}
 
-\subsection{Starting a New Project}
+Git won't help you manage your code unless you initialise it and tell it what's going on. It cannot organise your work for you like a magic fairy - you will always have to think about how to use its power to organise your code in a sensible way. 
+\\
 
-Git won't operate on your project unless you initialise it:
+Getting good at this comes with experience and fluffing it up a few times.
+
+
+\subsection{Repositories and commits}
+
+When you begin work on a coding project you typically create a directory to house all your project files. Or you might use an existing one if someone else has already started work.
+
+\begin{infobox}{A repository}
+	is a directory that Git has been told to monitor. It will watch all the files and subfolders within that directory. It's usually referred to as a \textbf{repo}.
+\end{infobox}
+
+The basic building blocks of a git repo are called \textbf{commits}.
+
+\begin{infobox}{A commit}
+	A snapshot or version of your code which you intentionally take at a moment in time. 
+\end{infobox}
+
+By looking at the history of commits in a repository, another developer can look at the code and figure out the story of how it's gotten to where it is today.
+
+\img{12cm}{resources/commit-history.jpg}{1em}{A commit history can tell the story of a project's code}
+
+
+\subsection{File states}
+
+In Git's world, files can have different states. It is important to know what state a file is in as it will affect what Git does with it. 
+\\
+
+The main states are:
+
+\begin{itemize}
+	\item \textbf{Untracked}: the file exists in the project directory but Git is unaware it exists, edits are not being watched/tracked. Files are usually only in this state when they are first created.
+    \item \textbf{Unmodified}: Git knows about the file and is tracking the file for changes, but the file has not been edited since it was created or since the last commit.
+    \item \textbf{Modified}: Git knows about the file and the file has been changed since it was created or since the last commit
+    \item \textbf{Staged}: Git has been told to add the changes in this file to your next commit
+    \item \textbf{Committed}: the file has been added to your last commit eg edits to it have been versioned/snapshotted. The file is now in the Unmodified state again.
+\end{itemize}
+
+\img{12cm}{resources/file-states.jpg}{1em}{The main states a file can be in according to Git}
+
+
+\section{Basic commands}
+
+\subsection{Creating a new repository}
+
+Navigate to the directory you wish to get Git watching and type:
 
 \begin{minted}{bash}
     git init
 \end{minted}
 
-At this point Git is ready to go, but is not yet tracking (version managing) anything.
+This command creates a hidden local repository folder \texttt{.git}. This is where Git will store all its information about your project; which files there are, how they have changed over time, etc.
 \\
 
-What this command does do is create a hidden local repository folder \texttt{.git}
+Avoid having a Git repository within a Git repository. Eg you initialise Git in a parent directory and then also initialise Git in a subdirectory of the parent. Git will get in a total muddle and you'll get all sorts of funny side affects. 
 \\
 
-This is where Git will store all its information about your project; which files there are, how they have changed over time, etc.
+Anyway, after running \texttt{git init} successfully Git is ready to go, but is not yet tracking (version managing) anything.
 
-\subsection{Tracking Our First File}
 
-New files added created the project start off in an untracked state, and need to be staged and committed before Git will track their state in future.
+\subsection{Finding out the state of a file}
+
+The main command you will use to find the states of files in your repo, and what is going on in your repo generally:
+
+\begin{minted}{bash}
+    git status
+\end{minted}
+
+\img{12cm}{resources/git-status.jpg}{1em}{An example output from running git status}
+
+You can also pass \texttt{git status} a flag, that gives a slightly different output.
+
+\begin{minted}{bash}
+    git status -s
+\end{minted}
+
+\img{12cm}{resources/git-status-s.jpg}{1em}{An example output from running git status -s}
+
+The status codes are as follows:
+
+
+\begin{itemize}
+	\item ??  = untracked 	
+    \item ' ' = unmodified (eg it's not showing up in the list)
+    \item M   = modified
+    \item A   = added
+	\item D   = deleted
+	\item R   = renamed
+	\item C   = copied
+	\item U   = updated but unmerged
+\end{itemize}
+
+VSCode also has some handy tools to help you track the status of your files too, and you will notice the same status flags on the right of each file name.
 \\
+
+\img{12cm}{resources/vscode-states.jpg}{1em}{The inbuilt Git tools in VSCode are really useful}
+
+
+\subsection{Tracking our first file}
+
+New files added to your project directory start off in an untracked state. They need to be tracked so Git watches them for changes.
+\\
+
+A file only needs to be tracked once and then Git will remember its existence forever - handy!
+\\
+
+Tracking a file and staging a file use the same command - more on staging files in a bit.
 
 \begin{minted}{bash}
     git add {filename}
@@ -38,9 +127,10 @@ New files added created the project start off in an untracked state, and need to
     \end{minted}
 \end{infobox}
 
+
 \subsection{Committing Our First File}
 
-Now we've used \texttt{git add} to track a file, we need to commit it.
+Now we've used \texttt{git add} to track a file and we've edited the file, we need to commit it.
 
 \begin{minted}{bash}
     git commit -m "my first commit"
@@ -59,6 +149,12 @@ Now we've used \texttt{git add} to track a file, we need to commit it.
     \end{minted}
 \end{infobox}
 
+Commits need to have a name and it is very important that you take the time to write good commit messages. Another person will need to read the message and fathom what changes to the code's behaviour are expected.
+\\
+
+\img{12cm}{resources/git_commit_messages.png}{1em}{Don't be like this person}
+
+
 \subsection{Changing a Commit}
 
 If you wish to amend the last commit you made, e.g. to change the commit message, then use:
@@ -67,18 +163,6 @@ If you wish to amend the last commit you made, e.g. to change the commit message
     git commit --amend
 \end{minted}
 
-\section{File Lifecycle \& Staging}
-
-Once files are tracked by Git (have been \texttt{git add}ed) then they go through these stages.
-
-\begin{itemize}
-    \item \textbf{Unmodified}: file has no changes from last commit
-    \item \textbf{Modified}: \texttt{git status} reports file has been edited
-    \item \textbf{Staged}: \texttt{git add \{filename\}} has been run to stage the change, ready to go into next commit
-    \item \textbf{Committed/unchanged}: \texttt{git commit ...} creates a new snapshot of those edits, and file goes back to being unchanged (from the last commit we just made)
-\end{itemize}
-
-\img{12cm}{resources/untracked.png}{1em}{Life cycle of tracked files in a Git version managed project}
 
 \subsection{Files with Multiple Statuses}
 
