@@ -12,9 +12,9 @@
 	
 	Use `git commit -m "A useful comment"` to create your next commit, with the files you had previously added to tracking.
 
-1) **Make some more changes**
+1) **Make changes to several files at one**
 
-	Edit 2 or more files at a time, use `git add` to add them and commit the changes.
+	Edit 2 or more files at a time, use `git add` to add them and then commit them. You should have multiple files in one commit.
 
 1) **Use `git log` to see the recent changes in your project.**
 

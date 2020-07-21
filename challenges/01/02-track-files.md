@@ -20,12 +20,12 @@
 
 	Use `git status` to see what Git thinks is going on.
 
-	Use `git add {filename}` to start tracking the files in your project.
+	Use `git add {filename}` to start tracking individual files in your project.
 
 	Note: you may need to use the full path, e.g. `git add css/style.css`
 
 	Use `git status` again to see what is the status now.
 
-	Use `git commit -m "Basic project files created"` to create your first commit, with the files you had previously added to tracking. You can change the commit message if you like.
+	Use `git commit -m "Basic project files created"` to create your first commit, with the files you had previously added to tracking. You can change the suggested commit message if you like to come up with something more meaningful.
 
 ## [Next challenge >](03-changes.md)
