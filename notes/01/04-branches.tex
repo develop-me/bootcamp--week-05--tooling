@@ -1,0 +1,119 @@
+\section{What is a branch?}
+
+Branches are an essential feature of Git to get your head around and professional developers will make heavy use of them.
+\\
+
+\begin{infobox}{A branch}
+	A single development stream, or split in the project, allowing you to try things out or develop features without affecting other work.
+\end{infobox}
+
+Branching means you diverge from the main line of development and continue to code in a separate stream of commits. Some people might refer to a branch as a parallel code world.
+\\
+
+\img{12cm}{resources/branch-concepts.jpg}{1em}{The main concepts of branches}
+
+
+The power of branches are incredibly useful for:
+\begin{itemize}
+    \item Feature development
+    \item Bug fixes
+    \item Trial and experiment
+\end{itemize}
+
+\subsection{The master branch}
+
+When you run \texttt{git init} Git automatically creates your first branch and it is called the \textbf{master branch}.
+\\
+
+The master branch is typically considered the version of your code that is production ready. In fact an identical copy of your master branch is usually what will be running on a live site or in a live app. More on Git workflows later.
+\\
+
+\section{Commands for working with branches}
+
+
+\subsection{Creating a branch}
+
+We can create a new branch and call it whatever we like using \texttt{git branch}.
+\\
+
+Take care to think about which branch you are deviating from. If you are on the master branch when you run this command your new branch will be an exact copy of the master branch, complete with the full commit history.
+\\
+
+It is usually best practice to ensure you are working from the master branch before you create a new branch, because master is usually considered the canoncial/primary version of your code and should be bug free.
+
+\begin{minted}{bash}
+
+    // Move to the master branch first
+    git checkout master
+
+    // Now create your new branch
+   git branch {branch-name}
+
+    eg.
+    git branch new-branch
+\end{minted}
+
+When you create a branch you don't automatically start working on it, you'll need to use the moving between branches command.
+\\
+
+\subsection{Moving between branches}
+
+You can move between branches using \texttt{git checkout}.
+
+\begin{minted}{bash}
+    git checkout {branch-name}
+\end{minted}
+
+\begin{infobox}{Creating and moving to a new branch all at once}
+    \begin{minted}{bash}
+        // add multiple files in one command
+        git checkout -b {branch-name}
+
+        eg.
+        git checkout -b new-branch
+    \end{minted}
+\end{infobox}
+
+
+\subsection{Seeing all your branches}
+
+It's very easy to forget the name of the branches you have, or if you start work on existing project it's useful to be able to to see what's already being work on.
+
+\begin{minted}{bash}
+    git branch -a
+\end{minted}
+
+
+\subsection{Deleting a branch}
+
+Once you have finished working on a branch (probably because you have merged it into master) it is good practice to get rid of it, so your git repo stays tidy and managable.
+\\
+
+\begin{minted}{bash}
+    git branch -D {branch-name}
+\end{minted}
+
+You can't run this command if you have already checked out the branch, eg you are already in it. It a good idea to run this command from the master branch.
+
+\section{Merging branches}
+
+\begin{infobox}{Merging}
+	Combining two branches together eg. your experimental branch back into master.
+	\\ 
+	
+	Merging creates a unified history and applies the changes of the other branch into your current working branch.
+\end{infobox}
+
+Merging is where Git starts to become really really useful. But it can also become a little bit of a headache especially if you have changes to the same parts of a file in both branches.
+\\
+
+It is usually when you come to run \texttt{git merge} that you can tell if you have broken your work down into sensible features and if your approach to using Git is sensible or not.
+\\
+
+\begin{minted}{bash}
+
+    // Start from the branch you wish to bring the changes into
+    git checkout {receiving-branch}
+
+    git merge {branch-name}
+\end{minted}
