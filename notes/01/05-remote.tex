@@ -1,39 +1,181 @@
+\section{Why use a remote repository?}
+
+Most operations are local, they are things that only affect your computer. Such as:
+
+\begin{itemize}
+    \item rolling back to early snapshot (checking out an earlier version of your files)
+    \item creating a branch
+    \item creating a new commit
+    \item merging branches
+\end{itemize}
+
+Working locally reduces requests over network, increases speed/efficiency and allows you to work offline. This can be very helpful a lot of the time.
+\\
+
+But we also need to be able to:
+
+\begin{itemize}
+    \item collaborate with others
+    \item make automated deployments of code to various environments
+    \item backup our code (losing code is sooo sad)
+\end{itemize}
+
+
+\subsection{Deploying code}
+
+There are three common approaches to deploying code to a production environment.
+
+\begin{itemize}
+    \item Working directly on files on a server (VERY bad!)
+    \item Deploying using FTP (pretty bad)
+    \item Deploying with version management (good, we like)
+\end{itemize}
+
+
+\img{12cm}{resources/work-directly-on-server.jpg}{1em}{Working directly on files on a server}
+
+Drawbacks:
+\begin{itemize}
+    \item No ability to automatically rollback changes
+    \item Requires you to keep backups and different versions of files manually
+    \item Working with multiple contributors is tricky
+	\item High risk that you break stuff in production
+\end{itemize}
+
+
+\img{12cm}{resources/deploy-using-ftp.jpg}{1em}{Deploy using FTP}
+
+Drawbacks are all of the above plus:
+\begin{itemize}
+    \item Slow, uploading and downloading each time
+	\item Error prone
+\end{itemize}
+
+\img{12cm}{resources/deploy-using-version-mgt.jpg}{1em}{Deploying with version management}
+
+Advantages:
+\begin{itemize}
+    \item Each version of a project is a commit and can be reverted to easily
+    \item Automatically keeps track of which files have changed and need to be uploaded
+    \item Changes have an audit log, who made what change when
+	\item Automated deployments also have an audit log
+\end{itemize}
+
+
+\section{Remote repo key concepts}
+
+\subsection{Remote repo workflow}
+
+When we are working with remote repos, here's the series of steps that are usually happening over and over again.
+\\
+
+\begin{itemize}
+    \item You \textbf{pull} other people's work from the remote repo
+    \item You make changes to it (in a new or existing branch)
+    \item You commit work
+    \item You \textbf{push} your work
+	\item You resolve conflicts if necessary
+\end{itemize}
+
+\begin{infobox}{git pull}
+	Retrieve / download new commits from the remote repo and attempt to merge them into your branch. Can lead to merge conflicts.
+\end{infobox}
+
+\begin{infobox}{git push}
+	Send / upload your commits to the remote repo so others can use your work 
+\end{infobox}
+
+
+\subsection{\texttt{origin}}
+
+Origin is the name of the remote repository where you want to publish you commits, as defined by you locally. This means someone else might connect to the same repo on their local machine but reference it with a different name to you.
+\\
+
+By convention the default remote repository is named \texttt{origin}, but you can work with several remotes (with different names) as the same time. It's not usually necessary to do this though as a lot the time it is just one remote repo for a project.
+\\
+
+This is helpful because the other way of telling your machine where the remote repo is is by using the URL. This can be quite long like:
+\\
+
+\texttt{https://github.com/develop-me/bootcamp--week-05--tooling.git}
+
+\texttt{git@github.com:develop-me/bootcamp--week-05--tooling.git}
+\\
+
+Typing a long name like that every time you want to push and pull from a repo will be a right pain. So the name, like \texttt{origin} gives us a shortcut way of referring to it.
+
+\subsection{Remote repo providers}
+
+There are lots of companies that provide remote repos. A few popular ones are:
+
+\begin{itemize}
+    \item GitHub
+    \item GitLab
+    \item BitBucket
+	\item Beanstalk
+\end{itemize}
+
+The services these providers offer is built on the workings of Git. However there may be additional services they offer such as project management tools, automated deployments and user management.
+\\
+
+Therefore Git !== GitHub 
+\\
+
+
+
+
 \section{Creating a new repository}
 
-There can only be one first commit, so consider carefully how it is created.
+The steps (with no code) are as follows:
 
-\subsection{Option 1: first commit on GitHub}
+\begin{itemize}
+    \item Set up project folder locally
+    \item Start version managing your folder
+    \item Add the remote repository (use git@github.com link)
+    \item Make changes
+    \item Commit changes
+    \item Push changes
+\end{itemize}
+
+There can only be one first commit, so consider carefully how it is created.
+\\
+
+\begin{infobox}{Option 1: first commit on your computer - preferred method}
+
+	\begin{enumerate}
+		\item Create your project repo on GitHub
+		\item DO NOT choose to "Initialize this repository with a README"
+		\item Locally run \texttt{git init}
+		\item Connect with GitHub with \texttt{git remote add origin {repository-URL}}
+		\item \texttt{git add {filename}}
+		\item \texttt{git commit -m "adding my first file"} - this is the first commit
+		\item \texttt{git push origin master} first commit makes it from local to the remote
+	\end{enumerate}
+\end{infobox}
+
+\textbf{Option 2: first commit on GitHub}
 
 \begin{enumerate}
-    \item create your project repo on GitHub
-    \item choose to "Initialize this repository with a README" \textbf{this is the first commit, adding this file on the remote}
-    \item locally run \texttt{git init}
-    \item connect with GitHub with \texttt{git remote add origin {repository URL}}
+    \item Create your project repo on GitHub
+    \item Choose 'Initialize this repository with a README' \textbf{this is the first commit, adding this file on the remote}
+    \item Locally run \texttt{git init}
+    \item Connect with GitHub with \texttt{git remote add origin {repository-URL}}
     \item \texttt{git fetch} to get information about the remote repo
     \item \texttt{git checkout master} to checkout the first commit from GitHub (including your README.md)
-    \item start tracking new files with \texttt{git add {filename}}
-    \item commiting with \texttt{git commit}
-    \item push up your work to GitHub with \texttt{git push}
+    \item Start tracking new files with \texttt{git add {filename}}
+    \item Commiting with \texttt{git commit}
+    \item Push up your work to GitHub with \texttt{git push}
 \end{enumerate}
 
-\subsection{Option 2: first commit on your computer}
-
-\begin{enumerate}
-    \item create your project repo on GitHub
-    \item DO NOT choose to "Initialize this repository with a README"
-    \item locally run \texttt{git init}
-    \item connect with GitHub with \texttt{git remote add origin {repository URL}}
-    \item \texttt{git add {filename}}
-    \item \texttt{git commit -m "adding my first file"} \textbf{this is the first commit, adding this file on the local}
-    \item \texttt{git push origin master} first commit makes it from local to the remote
-\end{enumerate}
-
-\section{Fewer commands with \texttt{git clone}}
-
-\texttt{git clone \{repository URL\} \{folder to create\}}
+\subsection{Fewer commands with \texttt{git clone}}
 
 A great shortcut for setting up a new project folder and connecting with the remote.
 \\
+
+\begin{minted}{bash}
+    git clone \{repository URL\} \{folder to create\
+\end{minted}
+
 
 It is equivalent to running all these commands:
 
@@ -48,34 +190,50 @@ It is equivalent to running all these commands:
 
 \section{Pushing a branch to remote repository}
 
-When working with branches locally (common to a feature branching workflow) you'll often want to get those branches onto the remote.
+When working with branches locally you'll often want to get those branches onto the remote.
+\\
+
+This allows others to pull your work down and code review it, run and test it or build upon your progress. Another key advantage is make sure any work you have done to date is backed up and not just on your local machine.
+\\
+
+The commands to follow are:
 
 \begin{minted}{bash}
-    git checkout master # optionally going back to master branch at the beginning
-    git branch my-feature-branch # create your feature branch
-    git checkout my-feature-branch # switch to working on that branch
-    # [do work] = make your code changes
-    git commit -am "commit message" # commit onto your feature branch
-    git push origin my-feature-branch # create branch on the remote and push commits up to it
+    # optionally going back to master branch at the beginning
+    git checkout master
+
+    # create your feature branch
+    git branch my-feature-branch 
+
+    # switch to working on that branch
+    git checkout my-feature-branch 
+
+    # [do work] = make your code changes and commit them
+    git commit -am "commit message" 
+
+    # create branch on the remote and push commits up to it
+    git push origin my-feature-branch
 \end{minted}
 
 git branch --set-upstream-to=origin/master master
 
 
-Pull requests
-
-
-cleanup
-
-delete from remote (GitHub)
-git checkout master and pull
-git branch -d my-feature-branch
-git branch -a
-git remote prune origin
-
+\section{Pull requests}
 
 \begin{infobox}{\texttt{git fetch} vs. \texttt{git pull}}
     What is the difference?
 
     \texttt{git pull} is in effect a \texttt{git fetch} then a \texttt{git checkout}, going to the remote and fetching any changes, then applying (or checking out) those changes to your version of the files.
 \end{infobox}
+
+
+\section{Deleting old branches}
+
+It is good practice to delete a branch from the remote after it has been merged into another branch and work on it has completely finished.
+
+\begin{minted}{bash}
+    git checkout master and pull
+    git branch -d my-feature-branch
+    git branch -a
+    git remote prune origin
+\end{minted}
