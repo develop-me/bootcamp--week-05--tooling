@@ -32,3 +32,4 @@
 1) Try and commit those changes
 1) You will find you can't - why is this?
 
+Or for more fun read up about stashing in the notes and give it a whirl.

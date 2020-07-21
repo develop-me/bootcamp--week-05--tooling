@@ -94,12 +94,35 @@ To return to the very last commit you made (the tip of your series of commits), 
 \end{minted}
 
 Don't use these commands blindly, especially as you get more advanced with Git and start using different branches. More to follow.
+\\
 
+Another option is to use \texttt{git reset}. This does a very similar thing and will return you to the tip (last commit) of whatever branch you are working on.
+
+\begin{minted}{bash}
+    git reset --hard HEAD
+\end{minted}
+
+Using the \texttt{--hard} flag resets the index and working tree. Any changes to tracked files in the working tree since your last commit are discarded.
+
+\begin{minted}{bash}
+    git reset --soft HEAD
+\end{minted}
+
+Using the \texttt{--soft} flag leaves all your changed files eg "changes to be committed" but moves your tree so you are working from your last commit.
+\\
 
 \subsection{Stashing unfinished work}
 
+\texttt{git stash} temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. 
+\\
 
-\section{Branches}
+Stashing is handy if you need to quickly switch context and work on something else, but you're mid-way through a code change and aren't quite ready to commit.
+\\
+
+The downside with stashing is remembering that you stashed something. I nearly always forget what I stashed where so use this with caution. Like all things Git, you still have to know what's going on, a tool like Git doesn't solve all your workflow problems!
+\\
+
+\href{https://www.atlassian.com/git/tutorials/saving-changes/git-stash}{Atlassian article on stashing}
 
 \section{Additional resources}
 
@@ -107,7 +130,7 @@ Don't use these commands blindly, especially as you get more advanced with Git a
     \item \href{https://en.wikipedia.org/wiki/Checksum}{Wikipedia: checksum}
 	\item \href{https://eagain.net/articles/git-for-computer-scientists/}{Git for Computer Scientists (Quick introduction to git internals for people who are not scared by words like Directed Acyclic Graph)}
 	\item \href{https://opensource.com/article/18/6/git-reset-revert-rebase-commands}{How to reset, revert and return to previous states in Git}
-
+	\item \href{https://www.atlassian.com/git/tutorials/saving-changes/git-stash}{Atlassian article on stashing}
 \end{itemize}
 
 
