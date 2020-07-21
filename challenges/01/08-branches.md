@@ -8,7 +8,7 @@ You are going to perform 3 tasks:
 
 To practice the branching technique, create a new feature branch *for each task*. That'll be three new branches in all.
 
-Here's a step by step guide on what to do:
+## Step by step guide
 
 1) **Create new feature branch**
 - Ensure you are on the master branch to start with - `git checkout master`
