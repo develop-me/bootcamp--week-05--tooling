@@ -14,6 +14,6 @@
 
 1) [Advanced challenge - deleting files](06-remove-files.md)
 
-1) [Going back](07-rewind.md)
+1) [Moving between commits](07-rewind.md)
 
 1) [Branches](08-branches.md)

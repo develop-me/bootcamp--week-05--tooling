@@ -117,3 +117,39 @@ It is usually when you come to run \texttt{git merge} that you can tell if you h
 
     git merge {branch-name}
 \end{minted}
+
+\subsection{Resolving merge conflicts}
+
+If the two branches you're trying to merge both changed the same part of the same file, Git won't know what your code means and therefore what should replace what. 
+\\
+
+When such a situation occurs, it stops right before the merge commit so that you can resolve the conflicts manually. This is called a merge conflict.
+\\
+
+\begin{infobox}{A merge conflict}
+	An event that occurs when Git is unable to automatically resolve differences in code between two commits.
+\end{infobox}
+
+When you encounter a merge conflict, running \texttt{git status} shows you which files need to be resolved.
+\\
+
+Git will helpfully \textbf{edit the content} of the affected files with visual indicators that mark both sides of the conflicted content. These visual markers are: 
+
+\begin{itemize}
+    \item \texttt{<<<<<<<}
+    \item \texttt{=======}
+    \item \texttt{>>>>>>>}
+\end{itemize}
+
+Generally the content before the ======= marker is the receiving branch and the part after is the merging branch.
+\\
+
+Its helpful to search a project for these indicators during a merge to find where conflicts need to be resolved.
+\\
+
+
+\section{Additional resources}
+
+\begin{itemize}[leftmargin=*]
+    \item \href{https://www.atlassian.com/git/tutorials/using-branches/git-merge}{Atlassian Git merge}
+\end{itemize}
