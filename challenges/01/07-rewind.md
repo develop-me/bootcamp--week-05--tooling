@@ -13,7 +13,17 @@
 
 	Use `git checkout master` or `git switch -` to get back to the most recent commit.
 
-*`HEAD~` is a shorthand reference for previous commit, as in "one commit ago".*
+1) **Move to a different commit**
+
+	Redo step 1 again, but this time move to a different commit than before.
+
+1) **Use `git reset`**
+
+	Experiment with `git reset --hard HEAD` and `git reset --soft HEAD` to return back to your last commits.
+
+	Keep using `git reflog` to track how you are moving around between your commits.
+
+1) **Add an emoji to slack to let the instructor know you have finished**
 
 ## Advanced
 
@@ -22,3 +32,4 @@
 1) Try and commit those changes
 1) You will find you can't - why is this?
 
+Or for more fun read up about stashing in the notes and give it a whirl.

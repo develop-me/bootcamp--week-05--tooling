@@ -1,30 +1,46 @@
 # Using pull requests
 
+**Please read through all the instructions at least once before you start.**
+
 You are going to perform 3 tasks:
 
 - add a simple `<nav>` to all HTML pages, could just be 1 `<a>` link
 - add a contact page with simple form
 - add a new stylesheet and `<link>` to all HTML pages
 
-For these use separate feature branches with pushing to remote, and pull requests each time.
+For each task use a separate feature branch, pushing it to remote, create and resolve the merge request.
 
-The workflow:
+### The workflow for each task
 
-1) `git checkout master`
-1) `git pull` in case master has changed (if you get an _There is no tracking information
-_ error run `git branch --set-upstream-to=origin/master master
-`)
-1) `git branch {branch name}`
-1) `git checkout {branch name}`
-1) [do work]
-1) `git commit -am "commit message"`
-1) `git push origin {branch name}`
-1) go to your project repo on [GitHub.com](https://github.com/) and make a pull request with your new feature branch
-1) review, approve and merge the pull request
-1) delete the branch on remote (GitHub)
-1) on local switch back to master
-1) `git pull` the recent changes to master
-1) continue to next task
+1) **Start on your master branch**
+
+   `git checkout master`
+   `git pull` - get the latest version of master
+   
+	If you get an _There is no tracking information_ error run `git branch --set-upstream-to=origin/master master`
+
+1) **Create your branch and do work**
+
+   `git branch {branch name}`
+   `git checkout {branch name}`
+    [do work and commit]
+
+1) **Send your branch to the remote repo**
+
+   `git push origin {branch name}`
+
+1) **Do the pull request**
+
+   Go to your project repo on [GitHub.com](https://github.com/) and make a pull request with your new feature branch
+   Review, approve and merge the pull request
+   Delete the branch on remote (GitHub)
+
+1) **Continue**
+
+	Back to step one and continue to next task
+
+**Add an emoji to slack to let the instructor know you have finished before moving on to stuff below**	
+
 
 ## Advanced, optional 
 

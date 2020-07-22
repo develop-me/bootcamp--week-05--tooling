@@ -8,14 +8,12 @@
 
 1) [Commit changes](03-changes.md)
 
-1) [Getting information](04-info.md)
+1) [Version managing a simple project](04-simple-project.md)
 
-1) [Version managing a simple project](05-simple-project.md)
+1) [Advanced challenge - moving files](05-move-files.md)
 
-1) [Going back](06-rewind.md)
+1) [Advanced challenge - deleting files](06-remove-files.md)
 
-1) [Moving files](07-move-files.md)
+1) [Moving between commits](07-rewind.md)
 
-1) [Deleting files](08-remove-files.md)
-
-1) [Branches](09-branches.md)
+1) [Branches](08-branches.md)

@@ -18,15 +18,30 @@
         \textbf{fetch}:
 		Fetching file versions and information from central repository server, e.g. GitHub
 	\item
+        \textbf{the HEAD}:
+		The active commit you are currently working from.
+	\item
 		\textbf{merge}:
-		Merging two branches together, for example, your experimental branch back into the normal working branch, to release that experimental code. Applies the changes of the other branch into your current working branch.
+		Merging two branches together, for example, your experimental branch back into into master once to create a unified history. Applies the changes of the other branch into your current working branch.
     \item
+		\textbf{merge conflict}:
+		An event that occurs when Git is unable to automatically resolve differences in code between two commits.
+	\item
+		\textbf{origin}:
+		The name of the remote repository where you want to publish you commits, as defined by you locally.
+	\item
         \textbf{repository / repo}:
         Project files and a versioning database, in our example this is hosted on GitHub, but can be hosted on any Git server or your local machine.
     \item
     	\textbf{pull}
     	Pulling down from the central project repository and updating the branch you are working on.
+   \item
+    	\textbf{pull request}
+    	A request to merge one branch with another branch usually originating from a remote repo.
     \item
     	\textbf{push}
-    	Push your snapshots (work), to the central project repository, to allow other people to pull and checkout your changes.
+    	Push your commits to the central project repository to allow other people to pull and checkout your changes.
+    \item
+    	\textbf{push rejection}
+    	Someone has pushed some code to the same branch that you’re trying to contribute to. You won't be able to push your commit until you have done a successful `git pull`
 \end{itemize}
