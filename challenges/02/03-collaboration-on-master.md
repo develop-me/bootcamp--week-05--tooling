@@ -10,12 +10,15 @@
 1) **Do work**
 
    Make some changes to the site & preview changes in browser
+   
    Commit them
 
 1) **Put your changes on the repo**
 
    Now start to use `git push` and `git pull`.
+
    If you get a push rejection then `git pull` first then `git push`
+
    If you get a conflict then resolve that, commit and push again
 
 The aim of this exercise is to show you how a few things:
