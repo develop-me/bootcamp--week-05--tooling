@@ -44,6 +44,36 @@ The main states are:
 
 \img{12cm}{resources/file-states.jpg}{1em}{The main states a file can be in according to Git}
 
+\subsection{\texttt{.gitignore}}
+
+The \texttt{.gitignore} file allows you to specify any files or directories you do not want tracked inside your project repo.
+\\
+
+On complex projects this is invaluable.
+\\
+
+It uses globbing patterns to match against file names. Examples are as follows:
+
+
+\begin{minted}{bash}
+    
+    // By default, patterns match files in any directory
+    Debug.log
+
+    // The * is a wildcard that matches zero or more characters
+    *.log
+
+    // You can prepend a pattern with a double asterisk to match directories anywhere in the repository
+    **.log
+
+    //Prepending a slash matches files only in the repository root
+    /debug.log
+
+\end{minted}
+
+\href{https://linux.die.net/man/7/glob}{Globbing patterns}
+\href{https://www.atlassian.com/git/tutorials/saving-changes/gitignore}{Atlassian gitignore article}
+
 
 \section{Basic commands}
 
@@ -257,5 +287,7 @@ For a shorter list of recent commits use:
     \item \href{https://github.com/alphagov/styleguides/blob/master/git.md}{GDS Git style guide}
     \item \href{https://chris.beams.io/posts/git-commit/}{How to write a good Git commit message}
 	\item \href{https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message}{5 tips for a better commit message}
+	\item \href{https://linux.die.net/man/7/glob}{Globbing patterns}
+	\item \href{https://www.atlassian.com/git/tutorials/saving-changes/gitignore}{Atlassian gitignore article}
 \end{itemize}
 
