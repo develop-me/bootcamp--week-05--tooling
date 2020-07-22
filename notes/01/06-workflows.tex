@@ -1,0 +1,110 @@
+\section{Workflow considerations}
+
+There are lots of things to consider when designing a workflow for a project.
+\\
+
+\textbf{Who?}
+
+\begin{itemize}
+    \item Who’s going to work on what? Task delegation/ownership
+    \item Can the project work be chopped up into chunks/tasks?
+    \item Is there a clear delegation based on team roles? Front-end, back-end, tech lead
+\end{itemize}
+
+\textbf{Timescales}
+
+\begin{itemize}
+    \item What is the project timeline?
+    \item What are the milestones?
+	\item Are certain tasks dependant on others?
+	\item When are things going live?
+\end{itemize}
+
+\textbf{How?}
+
+\begin{itemize}
+    \item Is that work going to be reviewed? How?
+	\item How is it going to be tested?
+	\item How is it going merged and deployed?
+	\item Are we releasing in phases?
+	\item Do we quickly release new code to address bugs in the live system?
+\end{itemize}
+
+These considerations help to discern which workflow is best for your project.
+
+
+\subsection{Centralised workflow}
+
+Everyone works on master and commits all changes directly to master. This is a tricky way to work in teams.
+\\
+
+We tried an exercise doing it, I reckon most of you absolutely hated it. 
+\\
+
+It can work if you are the only person working on a project. 
+
+
+\subsection{Featured branch workflow}
+
+All feature development takes place in a dedicated branch instead of the master branch, with branches merged back into master when ready.
+\\
+
+Adding feature branches to your development process is an easy way to encourage collaboration and streamline communication. It gives other developers or lead developer the opportunity to sign off on a feature before it gets integrated into the official project.
+\\
+
+It's easy for multiple developers to work on a particular feature without disturbing the main codebase.
+\\
+
+\texttt{master} will never contain broken code, good for continuous integration environments.
+
+
+\subsection{Gitflow workflow}
+
+This, or a variation of this, is quite common in larger projects. Here's a great article about it: \href{https://nvie.com/posts/a-successful-git-branching-model/}{A successful Git branching model}.
+\\
+
+All development should take place in a branch instead of the master branch.
+\\
+
+New features should reside in their own branch and instead of branching off master, feature branches use another branch called development as their parent branch.
+\\
+
+When a feature is complete, it gets merged back into development and should never interact directly with master.
+\\
+
+Instead features end up going live because development merges to master.
+
+\img{12cm}{resources/gitflow.jpg}{1em}{An illustration of the key gitflow principles}
+
+
+
+
+
+\subsection{Forking workflow}
+
+Instead of using a single server-side repository to act as the “central” codebase, it gives every developer a server-side repository.
+\\
+
+Contributions can be integrated without the need for everybody to push to a single central repository.
+\\
+
+Developers push to their own server-side repositories with only the project maintainer can push to the official repository.
+\\
+
+Allows the maintainer to accept commits from any developer without giving them write access to the official codebase.
+\\
+
+Distributed workflow that provides a flexible way for large, organic teams (including untrusted third-parties) to collaborate securely.
+\\
+
+This also makes it an ideal workflow for open source projects.
+
+
+
+\section{Additional resources}
+
+\begin{itemize}[leftmargin=*]
+    \item \href{https://www.atlassian.com/git/tutorials/comparing-workflows}{Atlassian comparing workflows}
+	\item \href{https://nvie.com/posts/a-successful-git-branching-model/}{A successful Git branching model}
+\end{itemize}
+
