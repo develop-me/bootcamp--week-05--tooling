@@ -246,6 +246,57 @@ They are an important feature of team working and will be an integral part of a 
 A pull request can create a \textbf{merge conflict}.
 
 
+\subsection{Push rejection}
+
+Someone has pushed some code to the same branch that you’re trying to contribute to.
+\\
+
+That means the branch’s HEAD has moved forwards in the remote.
+\\
+
+You need to get the other person's code in your branch using `git pull`. This will sync your commit histories and then allow you to contribute your changes to the tip of the branch.
+\\
+
+The error on the command line usually looks like this:
+
+\begin{minted}{bash}
+    To git@github.com:develop-me/bdf.git
+
+    ! [rejected]        master -> master (non-fast-forward)
+
+    error: failed to push some refs to 'git@github.com:develop-me/bdf.git'
+
+    hint: Updates were rejected because the tip of your current branch is behind its remote counterpart. Merge the remote changes (e.g. 'git pull') before pushing again.
+
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+\end{minted}
+
+
+\subsection{ \texttt{git pull} merge conflict}
+
+You’re trying to get some new code in your branch, but there’s a conflict that needs resolving. This often follows on from when you get a push rejection.
+\\
+
+You won’t be able to \texttt{git push} until its sorted.
+\\
+
+The error on the command line usually looks like this:
+
+\begin{minted}{bash}
+    From github.com:develop-me/simple
+
+    * branch            master     -> FETCH_HEAD
+     
+	Auto-merging README.md
+
+    CONFLICT (add/add): Merge conflict in README.md
+
+    Automatic merge failed; fix conflicts and then commit the result.
+\end{minted}
+
+You need to look at the conflicts manually and figure out what to keep and how the final file should look - just like a regular merge.
+\\
+
 
 \subsection{Deleting old branches}
 
