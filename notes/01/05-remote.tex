@@ -167,6 +167,14 @@ There can only be one first commit, so consider carefully how it is created.
     \item Push up your work to GitHub with \texttt{git push}
 \end{enumerate}
 
+\begin{infobox}{ \texttt{git fetch} vs. \texttt{git pull}}
+    What's the difference?
+	\\
+
+    \texttt{git pull} is in effect a \texttt{git fetch} then a \texttt{git checkout}, going to the remote and fetching any changes, then applying (or checking out) those changes to your version of the files.
+\end{infobox}
+
+
 \subsection{Fewer commands with \texttt{git clone}}
 
 A great shortcut for setting up a new project folder and connecting with the remote.
@@ -188,12 +196,18 @@ It is equivalent to running all these commands:
     git checkout master
 \end{minted}
 
-\section{Pushing a branch to remote repository}
+
+\section{Branches and remote repos}
 
 When working with branches locally you'll often want to get those branches onto the remote.
 \\
 
 This allows others to pull your work down and code review it, run and test it or build upon your progress. Another key advantage is make sure any work you have done to date is backed up and not just on your local machine.
+\\
+
+\subsection{Pushing a branch to remote repository}
+
+First create the branch locally and then link it to a branch on your remote repo.
 \\
 
 The commands to follow are:
@@ -218,16 +232,22 @@ The commands to follow are:
 git branch --set-upstream-to=origin/master master
 
 
-\section{Pull requests}
+\subsection{Pull requests}
 
-\begin{infobox}{\texttt{git fetch} vs. \texttt{git pull}}
-    What is the difference?
+A \texttt{pull request} is a request to merge a branch with another branch.
+\\
 
-    \texttt{git pull} is in effect a \texttt{git fetch} then a \texttt{git checkout}, going to the remote and fetching any changes, then applying (or checking out) those changes to your version of the files.
-\end{infobox}
+These are usually created through using the tools your online repo provider offers in your browser. They can be resolved on your local machine or often using tools the Git repo provider offers in the browser. The principles of dealing with merge conflicts in remote repos is the same as local repos.
+\\
+
+They are an important feature of team working and will be an integral part of a process to discuss and review submitted code. Every team will handle this slightly differently depending on the team's culture.
+\\
+
+A pull request can create a \textbf{merge conflict}.
 
 
-\section{Deleting old branches}
+
+\subsection{Deleting old branches}
 
 It is good practice to delete a branch from the remote after it has been merged into another branch and work on it has completely finished.
 
