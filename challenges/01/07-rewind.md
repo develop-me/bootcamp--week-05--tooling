@@ -1,4 +1,4 @@
-# Going back
+## Going back
 1) **Use `git checkout {ref}` to rewind your project files**
 
 	Use `git reflog` to see recent history and commit references
@@ -12,16 +12,23 @@
 1) **Go back to most recent commit**
 
 	Use `git checkout master` or `git switch -` to get back to the most recent commit.
+	
 
-1) **Move to a different commit**
+## Removing experimental work
 
-	Redo step 1 again, but this time move to a different commit than before.
+1) **Make sure you are on the last commit**
+
+	Use `git checkout master` to be sure
+	
+
+1) **Make some changes, you can save your work but don't commit it**
+
 
 1) **Use `git reset`**
 
-	Experiment with `git reset --hard HEAD` and `git reset --soft HEAD` to return back to your last commits.
+	Experiment with `git reset --hard HEAD` and `git reset --soft HEAD` to return back to your very last commit.
 
-	Keep using `git reflog` to track how you are moving around between your commits.
+	Keep using `git reflog` to track how you are moving around between your commits and `git status` to check where you are
 
 1) **Add an emoji to slack to let the instructor know you have finished**
 
