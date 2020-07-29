@@ -1,3 +1,7 @@
+## Initiate npm
+
+`npm init --yes`
+
 ## Install gulp plugins we'll need
 
 For this task we're going to need to install:
