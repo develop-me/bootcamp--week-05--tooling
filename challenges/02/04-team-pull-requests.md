@@ -20,4 +20,4 @@ Let's improve our workflow with Pull Requests.
 
 These are optional challenges you can do if you finish quickly.
 
-## [Next challenge >](05-issues)
+## [Next challenge >](05-issues.md)
