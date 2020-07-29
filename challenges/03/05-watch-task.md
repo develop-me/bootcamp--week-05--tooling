@@ -11,4 +11,4 @@
 
 ## Advanced
 
-1) Setup a watch task for JS files - challenge 06 [Challenge 06 >](06-minify-js.md}
+1) Setup a watch task for JS files - challenge 06 [Challenge 06 >]{06-minify-js.md}
