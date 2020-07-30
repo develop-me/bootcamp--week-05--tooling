@@ -2,8 +2,16 @@
 
 ## Advice
 
-- Some questions you can setup your own test project directory to match the question setup.
-- Draw from or add to your own notes.
+This is an open book quiz. That means it's ok to:
+
+- Draw from (or add) to your own notes.
+- Use the slides or notes pdf.
+- Look up answers on google.
+- Setup your own test project directory to match the question setup.
+
+It's not ok to do this as a team or to share answers with each other.
+
+Send your answers to your instructor in [markdown format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and you will get a score and feedback on how you did. 
 
 ---
 
