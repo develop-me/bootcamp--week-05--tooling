@@ -129,4 +129,4 @@ NB: you need to escape the spaces in the file name `my secret passwords.txt` oth
 
 We'd look to fix conflicts in `/scss/_headings.scss` and `about.html`.
 
-However, fixing the merge conflicts in `/css/styles.min.css` is not really practical. So we'd accept one of the set of changes (it doesn't really matter which) and  run our gulp task again to overwrite `/css/styles.min.css`, rebuilding it with any recent changes from `/scss/_headings.scss`.*
+However, fixing the merge conflicts in `/css/styles.min.css` is not really practical (it's a minified file so almost impossible to work with). So we'd accept one of the set of changes (it doesn't really matter which) and  run our gulp task again to overwrite `/css/styles.min.css`, rebuilding it with any recent changes from `/scss/_headings.scss` and adding a new commit.*
