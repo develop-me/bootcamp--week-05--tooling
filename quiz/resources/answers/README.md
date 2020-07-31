@@ -122,8 +122,11 @@ my\ secret\ passwords.txt
 node_modules
 ```
 
+NB: you need to escape the spaces in the file name `my secret passwords.txt` otherwise it won't work. So it should look like this: `my\ secret\ passwords.txt`. Ideally, avoid spaces in file names, it often causes problems.
+
+
 ## 12. Gulp and git
 
 We'd look to fix conflicts in `/scss/_headings.scss` and `about.html`.
 
-Then we can run our gulp task again to overwrite `/css/styles.min.css`, rebuilding it with any recent changes from `/scss/_headings.scss`.
+However, fixing the merge conflicts in `/css/styles.min.css` is not really practical. So we'd accept one of the set of changes (it doesn't really matter which) and  run our gulp task again to overwrite `/css/styles.min.css`, rebuilding it with any recent changes from `/scss/_headings.scss`.*
