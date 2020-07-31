@@ -56,7 +56,7 @@ a) `git pull`
 
 b) Some changes from the remote overlap have been made at GitHub.
 
-c) I first need to pull those changes down, with `git pull` then can try `git push` again, unless there is a conflict.
+c) Fix the merge conflict.
 
 
 
