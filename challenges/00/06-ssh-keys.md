@@ -3,7 +3,7 @@
 Before you create some new SSH keys, worth checking if you already have some with:
 
 ```bash
-tail ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 ```
 
 ## Do you you get a screen of nonsense like this:

@@ -5,7 +5,7 @@ Run `node -v`
 We expect something like:
 
 ```bash
-v12.16.2
+v14.7.1
 ```
 
 ## Do you get that?

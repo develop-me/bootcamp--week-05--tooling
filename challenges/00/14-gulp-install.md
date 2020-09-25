@@ -3,11 +3,8 @@
 ## 1) Run:
 
 ```bash
-npm install gulp-cli -g
-npm install gulp -D
+npm install --global gulp-cli -g
 ```
-
-*Note: you may need to add `sudo` before each command if they fail due to permissions.*
 
 ## 2) Check if Gulp is installed
 

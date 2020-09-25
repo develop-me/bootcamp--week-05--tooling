@@ -8,7 +8,7 @@ Run:
 git --version
 ```
 
-*Note: Windows users should use Git within ConEmu, so run the above command and the rest for this week there.*
+*Note: Windows users should use the Ubuntu app or WSL Remote in VS Code to run the above command*
 
 ## Did you get something like `git version 2.23.0`?
 

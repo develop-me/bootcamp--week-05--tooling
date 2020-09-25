@@ -46,7 +46,6 @@ Computers files in our folders sometimes that we don't need to track in our proj
 We want to ignore `.DS_Store` files. These files are made by the Mac filesystem to store folder attributes, and are not part of our projects.
 
 ```bash
-touch ~/.gitignore
 echo ".DS_Store" >> ~/.gitignore_global
 echo "*.code-workspace" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
@@ -57,7 +56,6 @@ git config --global core.excludesfile ~/.gitignore_global
 In ConEmu:
 
 ```bash
-touch ~/.gitignore
 echo "Thumbs.db" >> ~/.gitignore_global
 echo "*.code-workspace" >> ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global

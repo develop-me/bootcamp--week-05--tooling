@@ -11,8 +11,7 @@ brew install node
 ### Windows
 
 ```bash
-curl -sL "https://deb.nodesource.com/setup_12.x" | sudo -E bash -
-sudo apt-get install -y gcc make ruby ruby-dev
+curl -sL "https://deb.nodesource.com/setup_14.x" | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
@@ -23,7 +22,7 @@ Run `node -v`
 We expect something like:
 
 ```bash
-v12.16.2
+v14.7.1
 ```
 
 ## Do you get that?
