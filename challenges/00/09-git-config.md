@@ -37,7 +37,7 @@ git config --global user.email "your_email@example.com"
 git config --global push.default matching
 ```
 
-## So that Git ignores unneccessary files
+## So that Git ignores unnecessary files
 
 Computers files in our folders sometimes that we don't need to track in our projects.
 
@@ -53,7 +53,7 @@ git config --global core.excludesfile ~/.gitignore_global
 
 ### Windows
 
-In ConEmu:
+In Ubuntu/WSL:
 
 ```bash
 echo "Thumbs.db" >> ~/.gitignore_global

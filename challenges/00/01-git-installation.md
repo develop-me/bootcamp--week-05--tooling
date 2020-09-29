@@ -8,7 +8,7 @@ brew install git
 
 ## Windows
 
-In ConEmu run:
+In Ubuntu/WSL run:
 
 ```bash
 sudo apt-get install -y git
