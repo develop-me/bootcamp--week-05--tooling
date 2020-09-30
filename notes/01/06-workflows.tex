@@ -60,21 +60,29 @@ It's easy for multiple developers to work on a particular feature without distur
 
 \subsection{Gitflow workflow}
 
-This, or a variation of this, is quite common in larger projects. Here's a great article about it: \href{https://nvie.com/posts/a-successful-git-branching-model/}{A successful Git branching model}.
+This, or a variation of it, is quite common in larger projects. Here's a great article about it: \href{https://nvie.com/posts/a-successful-git-branching-model/}{A successful Git branching model}.
 \\
 
-All development should take place in a branch instead of the master branch.
+All development should take place on the \texttt{develop} branch instead of \texttt{master}.
 \\
 
-New features should reside in their own branch and instead of branching off master, feature branches use another branch called development as their parent branch.
+New \textbf{features} should reside in their own branch and instead of branching off \texttt{master}, features branch from \texttt{develop} as their parent branch.
 \\
 
-When a feature is complete, it gets merged back into development and should never interact directly with master.
+When a feature is complete, it gets merged back into \texttt{develop} and should never interact directly with \texttt{master}.
 \\
 
-Instead features end up going live because development merges to master.
+Instead features end up going live because \texttt{develop} merges into \texttt{master} using a \textbf{release}.
 
-\img{12cm}{resources/gitflow.jpg}{1em}{An illustration of the key gitflow principles}
+\img{12cm}{resources/gitflow.jpg}{1em}{An illustration of the key Gitflow principles}
+
+Because merging into \texttt{master} is a very deliberate action, this strategy has the advantage of always having a \texttt{master} branch that represents a fully-working version of the code that's ready to be used.
+\\
+
+For website development it is also common for the \texttt{master} branch to represent the \textbf{production} version of the site – the code that's up on the live website – and for the \texttt{develop} branch to represent the \textbf{staging} version of the website – the in-progress test version.
+\\
+
+Gitflow is not well suited to all projects. Some companies use a ``deploy early and often'' model, where new features are quickly added to the live site, but often only turned on for a subset of users (using ``feature flags'') – trying to use Gitflow with this deployment model becomes messy very quickly.
 
 
 
