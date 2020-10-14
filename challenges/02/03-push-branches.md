@@ -21,4 +21,4 @@
 
 	`git push`
 
-**Add an emoji to slack to let the instructor know you have finished before moving on to stuff below**	
+**Add an emoji to slack to let the instructor know you have finished**	

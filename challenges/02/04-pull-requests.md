@@ -15,6 +15,7 @@ For each task use a separate feature branch, pushing it to remote, create and re
 1) **Start on your master branch**
 
    `git checkout master`
+
    `git pull` - get the latest version of master
    
 	If you get an _There is no tracking information_ error run `git branch --set-upstream-to=origin/master master`
@@ -22,7 +23,9 @@ For each task use a separate feature branch, pushing it to remote, create and re
 1) **Create your branch and do work**
 
    `git branch {branch name}`
+
    `git checkout {branch name}`
+
     [do work and commit]
 
 1) **Send your branch to the remote repo**
@@ -32,7 +35,9 @@ For each task use a separate feature branch, pushing it to remote, create and re
 1) **Do the pull request**
 
    Go to your project repo on [GitHub.com](https://github.com/) and make a pull request with your new feature branch
+
    Review, approve and merge the pull request
+   
    Delete the branch on remote (GitHub)
 
 1) **Continue**
