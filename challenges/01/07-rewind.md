@@ -26,7 +26,7 @@
 
 1) **Use `git reset`**
 
-	Experiment with `git reset --hard HEAD` and `git reset --soft HEAD` to return back to your very last commit.
+	Experiment with `git reset --hard HEAD` to throw away your experimental work.
 
 	Keep using `git reflog` to track how you are moving around between your commits and `git status` to check where you are
 
@@ -39,4 +39,6 @@
 1) Try and commit those changes
 1) You will find you can't - why is this?
 
-Or for more fun read up about stashing in the notes and give it a whirl.
+Other stuff you can do:
+* Read up about stashing in the notes and give it a whirl.
+* Read in depth about the different `git reset` flags: --hard, --mixed and --soft [https://www.atlassian.com/git/tutorials/undoing-changes/git-reset](Atlassian reset tutorial)

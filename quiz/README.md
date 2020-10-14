@@ -125,6 +125,8 @@ How do you 'throw away' all work since last commit, and revert to how the files 
 
 How do you 'throw away' the last commit `bbb123`, going back to the commit before last `aaa123`, but keep the files as they are (i.e. the changes as they are respresentated in commit `bbb123`), to not lose that work.
 
+*This is a tough question as we don't cover it in the lectures. Clue: have a dig around the `git reset` stuff*.
+
 ## 8. Ignore it all!
 
 Create a `.gitignore` file that will cause Git to only track `hello.html` in my folder:
