@@ -156,6 +156,14 @@ Tracking a file and staging a file use the same command - more on staging files 
 
         // add all of type
         git add *.scss
+
+        // use carefully.
+        // a shorthand for staging all modified files, including hidden files like .gitignore
+        git add .
+
+        // use carefully.
+        // as git add . but does not stage hidden files
+        git add *
     \end{minted}
 \end{infobox}
 
