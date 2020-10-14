@@ -4,7 +4,7 @@
 % setup variables ------------------------------
 
 % your name
-\newcommand\authors{Oli Ward}
+\newcommand\authors{Oli Ward and Hannah Smith}
 
 % the week number
 \newcommand\weekno{5}
@@ -37,23 +37,29 @@
 % the standard preface
 \input{../../latex-templates/preface.tex}
 
+\chapter{Introduction to Version Management}
+\input{01/01-intro.tex}
+
 \chapter{Setup}
 \input{01/00-setup.tex}
 
-\chapter{Introduction to Git}
-\input{01/01-intro.tex}
-
-\chapter{Basics}
+\chapter{Git basics}
 \input{01/02-the-basics.tex}
 
-\chapter{Git's Behaviour}
-\input{01/03-behaviour.tex}
+\chapter{Moving between commits}
+\input{01/03-moving.tex}
 
-\chapter{Working with the Remote}
-\input{01/04-remote.tex}
+\chapter{Branches}
+\input{01/04-branches.tex}
+
+\chapter{Remote repositories}
+\input{01/05-remote.tex}
+
+\chapter{Git workflows}
+\input{01/06-workflows.tex}
 
 \chapter{Links}
-\input{01/05-links.tex}
+\input{01/07-links.tex}
 
 % an un-numbered chapter
 \nchapter{Glossary}

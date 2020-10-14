@@ -1,5 +1,7 @@
 # Remove files from tracking or project
 
+This is an advanced task - if you have questions or help please ask your instructor or TA for help outside of the main lectures. The main class will not wait whilst you complete these.
+
 1) **Remove a file from tracking but keep the file**
 
 	Create a new file if you like, `git add` and `git commit it`.

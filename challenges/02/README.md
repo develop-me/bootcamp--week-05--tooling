@@ -6,10 +6,8 @@
 
 1) [Feature branches and pull requests](02-pull-requests.md)
 
-1) [Getting ready to collaborate](03-collaboration-setup.md)
+1) [Team collaboration on master](03-collaboration-on-master.md)
 
-1) [Team working: push rejections and conflicts](04-push-rejection-conflicts.md)
+1) [Using pull requests in teams](04-team-pull-requests.md)
 
-1) [Using pull requests in teams](05-team-pull-requests.md)
-
-1) [Working with issues](06-issues.md)
+1) [Working with issues](05-issues.md)
