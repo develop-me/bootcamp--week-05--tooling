@@ -26,11 +26,11 @@ To practice the branching technique, create a new feature branch *for each task*
 - Switch back to `master` with `git checkout master`
 - You won't see your changes in master as they are in your other branch
 - Merge your feature branch into `master` with `git merge {feature branch name}`
-- Optionally delete the now merged feature branch
+- Optionally delete the now merged feature branch `git branch -D {feature-branch-name}`
 
 5) **Keep going**
 - Do the remaining tasks, making sure you start on the master branch each time
 - **Add an emoji to slack to let the instructor know you have finished**
 
 ### Stretch stuff
-If you have completed all of the above you can read ahead about resolving merge conflicts in the notes.
+If you have completed all of the above you can read about resolving merge conflicts in the notes.

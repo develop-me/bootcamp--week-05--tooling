@@ -1,6 +1,7 @@
 # Tooling day 2 challenges: Git
 
 ---
+0. [Creating and merging a branch](00-branches.md)
 
 1) [Creating a repo on GitHub](01-remote-setup.md)
 
