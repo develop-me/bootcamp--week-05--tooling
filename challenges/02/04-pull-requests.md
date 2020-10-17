@@ -10,6 +10,10 @@ You are going to perform 3 tasks:
 
 For each task use a separate feature branch, pushing it to remote, create and resolve the merge request.
 
+### Before you start
+
+1) **Set up a new local and remote repo**
+
 ### The workflow for each task
 
 1) **Start on your master branch**
