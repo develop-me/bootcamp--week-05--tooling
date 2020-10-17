@@ -7,14 +7,18 @@
    In your terminal navigate to the parent directory of where you want your new directory to be
 
    Eg
-   You have a directory called 'Tooling week' 
+   You have a directory called 'Tooling week'
+
    You want your new repo to be inside 'Tooling week'
+
    You just navigate to the 'Tooling week' directory
+
    `cd /Users/hannah/Dropbox/Apps/local/tooling-week`
 
 1) **Run git clone**
 
    Use `git clone git@github.com:develop-me/git-simple.git` 
+   
    This creates a new project directory on your machine and places the content of the remote repo inside it
 
 ## [Next challenge >](06-team-pull-requests.md)
