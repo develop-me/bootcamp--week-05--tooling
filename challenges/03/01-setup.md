@@ -2,10 +2,9 @@
 
 1) **Clone project**
 
-Template site repository on GitHub:
-[https://github.com/develop-me/gulp-template](https://github.com/develop-me/gulp-template)
+    Template site repository on GitHub: [https://github.com/develop-me/gulp-template](https://github.com/develop-me/gulp-template)
 
-*Remember: `git clone` will make a new folder wherever you are in terminal, so `cd` to the right place or `pwd` to check where you are.*
+    *Remember: `git clone` will make a new folder wherever you are in terminal, so `cd` to the right place or `pwd` to check where you are.*
 
 
 1) **Initiate npm**
@@ -36,9 +35,9 @@ Template site repository on GitHub:
     Uses Sass, compiles `scss/styles.scss` to `css/styles.css`, from many Sass files
 
     Uses some JavaScript files (see bottom of `index.html`):
-- `js/jquery-3.3.1.slim.js`
-- `js/popper.js`
-- `js/bootstrap.js`
+    - `js/jquery-3.3.1.slim.js`
+    - `js/popper.js`
+    - `js/bootstrap.js`
 
 
 1) **Add an emoji to slack to let the instructor know you have finished**	
