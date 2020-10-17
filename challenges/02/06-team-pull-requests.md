@@ -16,17 +16,17 @@ The aim of this exercise is to simulate what it can be like working in teams.
 
 1) **Put your changes on the repo and merge into master**
 
-   Push your branch up to GitHub
+   Push your branch up to GitHub `git push origin {branch-name}`
 
    Create a pull request in GitHub asking to merge your branch into master
    
    Assign the pull request to yourself and resolve any merge conflicts
 
-   Once you have successfully merged, clean you after yourself and remove your branch from GitHub and your local repo. 
+   Once you have successfully merged, clean up after yourself and remove your branch from GitHub and your local repo. 
    
    Run `git branch -a` to see what branches your local repo knows about. Running `git fetch --prune` will update your local repo's output of what's branches exist in the remove. Run `git branch -a` again to check all your lists of branches are in sync with one another.
 
-1) **Get a fresh version of master locally** 
+1) **Get the latest version of master** 
 
    Checkout your master branch
    
@@ -37,6 +37,8 @@ The aim of this exercise is to simulate what it can be like working in teams.
 
 
 ### Part 2
+
+This where it could start getting interesting, and you are likely to encounter merge conflicts that you need to work through and resolve.
 
 1) **Do some work in a feature branch**
 
@@ -62,12 +64,14 @@ The aim of this exercise is to simulate what it can be like working in teams.
 
    Once the merge is complete, clean up your branches.
 
+   If you did not get chance to practice resolving a merge conflict, ask for another pull request. Remember a merge request happens when the same part of a file has been edited in two different commits.
+
 **Add an emoji to slack to indicate you have finished part II**	
 
 
 
-## Advanced challenge
+## Advanced challenges
 
-These are optional challenges you can do if you finish quickly.
+These are optional challenges you can do if you want some more.
 
 ## [Optional challenge >](07-issues.md)
