@@ -1,14 +1,5 @@
-## Initiate npm
+# Minify your site's CSS
 
-`npm init --yes`
-
-## Add a .gitignore file
-
-`touch .gitignore` and then edit the file and add the following into your new `.gitignore` file:
-
-`/node_modules'
-
-This will tell your local git repo to ignore all the files that get added into the `node_modules` directory.
 
 ## Install gulp plugins we'll need
 
