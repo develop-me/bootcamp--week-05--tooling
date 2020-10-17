@@ -9,7 +9,7 @@
 
 1) [Pull requests](04-pull-requests.md)
 
-1) [Team collaboration on master](05-git-clone.md)
+1) [Git clone](05-git-clone.md)
 
 1) [Using pull requests in teams](06-team-pull-requests.md)
 
