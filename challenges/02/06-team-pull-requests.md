@@ -1,23 +1,73 @@
-# Improving workflow with pull requests
+# Team work with pull requests
 
-Let's improve our workflow with Pull Requests.
+The aim of this exercise is to simulate what it can be like working in teams.
 
-1) Work with feature branches locally
+*Note: we're using the same repo as the challenge before. It's available on GitHub here: [https://github.com/develop-me/git-simple](https://github.com/develop-me/git-simple)*
 
-1) Push your branch up to GitHub
+### Part 1
 
-1) Then create a pull request on [GitHub](https://github.com/develop-me/git-simple/branches) and assign to another team member as a *Reviewer*
+1) **Do some work in a feature branch**
 
-1) Review a merge request that someone else has sent you.
+   Create a local branch
 
-*Note: the project repository is available on GitHub here: [https://github.com/develop-me/git-simple](https://github.com/develop-me/git-simple)*
+   Make some changes to the site & preview changes in browser
 
-*If you need a reminder of the order of operations, refer to [02-pull-requests.md](02-pull-requests.md) challenge.*
+   Commit them to your local branch
 
-**Add an emoji to slack once you have sent someone a pull request and dealt with one sent to you**	
+1) **Put your changes on the repo and merge into master**
+
+   Push your branch up to GitHub
+
+   Create a pull request in GitHub asking to merge your branch into master
+   
+   Assign the pull request to yourself and resolve any merge conflicts
+
+   Once you have successfully merged, clean you after yourself and remove your branch from GitHub and your local repo. 
+   
+   Run `git branch -a` to see what branches your local repo knows about. Running `git fetch --prune` will update your local repo's output of what's branches exist in the remove. Run `git branch -a` again to check all your lists of branches are in sync with one another.
+
+1) **Get a fresh version of master locally** 
+
+   Checkout your master branch
+   
+   Run `git pull` to an update to date copy of master from the remote repo.
+
+
+1) **Add an emoji to slack indicate you are ready to receive pull requests in part 2**	
+
+
+### Part 2
+
+1) **Do some work in a feature branch**
+
+   Create a local branch
+
+   Make some smallish changes to the site & preview changes in browser
+
+   Commit them to your local branch
+
+1) **Put your changes on the repo and create a pull request**
+
+   Push your branch up to GitHub
+
+   Create a pull request in GitHub asking to merge your branch into master
+   
+   Assign the pull request to someone who has left an emoji against part 1 of this challenge in slack
+
+1) **Resolve a pull request assigned to you**
+
+   Hopefully you will already have, or will shortly receive a pull request from one else to resolve
+
+   Have a go at resolving it. Use the commenting functionality within the pull request to communicate if you have questions etc.
+
+   Once the merge is complete, clean up your branches.
+
+**Add an emoji to slack to indicate you have finished part II**	
+
+
 
 ## Advanced challenge
 
 These are optional challenges you can do if you finish quickly.
 
-## [Next challenge >](05-issues.md)
+## [Next challenge >](07-issues.md)
