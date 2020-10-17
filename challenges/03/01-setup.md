@@ -22,8 +22,11 @@
 1) **Add a .gitignore file to manage the madness that is /node_modules**
 
 	`touch .gitignore` 
+
 	`code .gitignore` and add `/node_modules'
+
     save your file
+	
 	use either VSCode or `git status` to see that it's worked
 
 1) **Tour of the site**
