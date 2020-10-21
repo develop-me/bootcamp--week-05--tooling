@@ -42,13 +42,13 @@ You can also run \texttt{npm init -yes} which skips the questionnaire and is a l
 After that you can install any npm packages into your project through using \texttt{npm install package-name}.
 \\
 
-This will download the specified package and insert it into a new directory called \texttt{node modules}. If \texttt{node modules} does not already exist in the root of your project, npm will create it for you.
+This will download the specified package and insert it into a new directory called \texttt{node\_modules}. If \texttt{node\_modules} does not already exist in the root of your project, npm will create it for you.
 \\
 
 \texttt{npm install} also updates your \texttt{package.json} file details of the package you just added. This is very useful for helping you maintain a reproducible setup.
 \\
 
-You will also notice that a new file called \texttt{package-lock.json} appears. This auto-generates for any operation where npm changes either \texttt{package.json} or \texttt{node modules}. It describes the exact tree generated, with detailed version numbers and can be helpful in the ensuring subsequent installs are identical. 
+You will also notice that a new file called \texttt{package-lock.json} appears. This auto-generates for any operation where npm changes either \texttt{package.json} or \texttt{node\_modules}. It describes the exact tree generated, with detailed version numbers and can be helpful in the ensuring subsequent installs are identical. 
 \\
 
 \begin{infobox}{An \texttt{npm install} shortcut}
@@ -83,10 +83,10 @@ You have two choices: a good option and a bad option.
 The bad option is track all these files and add them to your git repo. Why is this bad?
 \\
 
-It's bad because Git is really meant to help you version control the files you are actively developing, and if you are just using someone's package as is (highly likely) you won't be editing them.
+It's bad because Git is really meant to help you version control the files you are actively developing, and if you are just using someone's package as is (highly likely) you won't be editing the files within the package.
 \\
 
-So including them in your Git repo adds no value because we can already add these files to any project by getting hold of \texttt{package.json} and running \texttt{npm i}. See previous chapter.
+So including them in your Git repo adds no value because we can already get these files in any project by getting hold of \texttt{package.json} and running \texttt{npm i}. See previous chapter.
 \\
 
 They just kinda get in the way of your Git repo.
