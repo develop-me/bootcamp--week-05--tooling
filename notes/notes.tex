@@ -28,14 +28,14 @@
 % render the title page (uses variables above)
 \tp
 
-% a quote page to start
-\quotepage{The trouble with Git quotes is everyone has their own version}{Some T-Shirt}
-
 % generate the table of contents
 \tableofcontents
 
 % the standard preface
 \input{../../latex-templates/preface.tex}
+
+% A git quote to act as a separator
+\quotepage{The trouble with Git quotes is everyone has their own version}{Some T-Shirt}
 
 \chapter{Introduction to Version Management}
 \input{01/01-intro.tex}
@@ -61,9 +61,14 @@
 \chapter{Links}
 \input{01/07-links.tex}
 
-% an un-numbered chapter
-\nchapter{Glossary}
+\chapter{Git Glossary}
 \input{glossary.tex}
+
+% A silly programming quote to act as a separator
+\quotepage{Introducing the hide and seek champion since 1958    ; }{Some T-Shirt}
+
+\chapter{npm basics}
+\input{02/01-npm.tex}
 
 % standard colophon (uses variables above)
 \input{../../latex-templates/colophon.tex}

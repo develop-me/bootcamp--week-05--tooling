@@ -1,0 +1,121 @@
+\section{npm basics}
+
+npm is a package manager for JavaScript.
+
+\begin{infobox}{A package}
+	Packages are discrete chunks of code that can be used by someone else to fulfill a purpose.
+\end{infobox}
+
+Packages are incredibly useful for:
+\begin{itemize}
+    \item Making use of the code written by others - this is smart, never shy away from using well-written and maintained code to save you time
+	\item Openly sharing your work with others to use
+	\item Manage packages privately, eg for your team to use
+\end{itemize}
+
+You can find packages through the npm database at \href{https://npmjs.com}{npmjs.com}.
+\\
+
+\section{package.json}
+
+\texttt{package.json} is a file you always need in a project directory, usually in the project root, which holds meta-data relevant to your project. Think of it as a kind of manifest.
+\\
+
+More specifically it details your project dependencies - the packages your project needs (eg is dependent on) to run and the minimum version numbers required.
+\\
+
+This makes any project that uses npm reproducible by someone else. You can just share the \texttt{package.json} file and have all the details about what is needed.
+\\
+
+
+\section{Setting up a new project to use npm packages}
+
+Running \texttt{npm init} on the command line guides you through the process of creating a basic \texttt{package.json} file.
+\\
+
+It will ask you key questions about the metadata of your projects through a command line questionnaire.
+\\
+
+You can also run \texttt{npm init -yes} which skips the questionnaire and is a lot faster.
+\\
+
+After that you can install any npm packages into your project through using \texttt{npm install package-name}.
+\\
+
+This will download the specified package and insert it into a new directory called \texttt{node modules}. If \texttt{node modules} does not already exist in the root of your project, npm will create it for you.
+\\
+
+\texttt{npm install} also updates your \texttt{package.json} file details of the package you just added. This is very useful for helping you maintain a reproducible setup.
+\\
+
+You will also notice that a new file called \texttt{package-lock.json} appears. This auto-generates for any operation where npm changes either \texttt{package.json} or \texttt{node modules}. It describes the exact tree generated, with detailed version numbers and can be helpful in the ensuring subsequent installs are identical. 
+\\
+
+\begin{infobox}{An \texttt{npm install} shortcut}
+	You can install multiple npm packages at once by using 
+	
+	\begin{minted}{bash}
+       npm install {package1} {package2} {package3}
+	\end{minted}
+\end{infobox}
+
+
+\section{Reproducing the packages from an existing project}
+
+By sharing \texttt{package.json} with another developer, they can use \texttt{npm install} (or even faster to type \texttt{npm i}) to download all the dependencies listed.   
+\\
+
+This avoids you having to look through \texttt{package.json} and install each dependency listed one at a time - which is of course incredibly error prone.
+
+
+\section{\texttt{.gitignore and npm}}
+
+You might have noticed that when you download a package, it usually consists of lots of files, like hundreds of files, maybe even thousands of files. When you first install a package and run \texttt{git status}, Git will report that all these files are unstaged. 
+\\
+
+All these files will get in your way of seeing the actual files you are changing.
+\\
+
+You have two choices: a good option and a bad option.
+\\
+
+\subsection{The bad option}
+The bad option is track all these files and add them to your git repo. Why is this bad?
+\\
+
+It's bad because Git is really meant to help you version control the files you are actively developing, and if you are just using someone's package as is (highly likely) you won't be editing them.
+\\
+
+So including them in your Git repo adds no value because we can already add these files to any project by getting hold of \texttt{package.json} and running \texttt{npm i}. See previous chapter.
+\\
+
+They just kinda get in the way of your Git repo.
+\\
+
+\subsection{The good option}
+
+Tell me the good option I hear you cry!
+\\
+
+The good option is to use \texttt{.gitignore}. You can refer back to the Git Basics section for more info.
+\\
+
+So edit your \texttt{.gitignore} file to include 
+\\
+
+	\begin{minted}{bash}
+       node_modules
+	\end{minted}
+
+and watch Git forget all about them and make your working repo a much easier place to work within.
+\\
+
+Remember, is good practice to include your \texttt{.gitignore} file in your repo.
+\\
+
+
+\section{Additional resources}
+
+\begin{itemize}[leftmargin=*]
+    \item \href{https://docs.npmjs.com/files/package-lock.json}{package-lock.json documentation}
+\end{itemize}
