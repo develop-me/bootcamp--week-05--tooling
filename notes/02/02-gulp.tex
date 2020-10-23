@@ -25,9 +25,263 @@ We teach gulp because it is fairly quick to learn (some might say, we'll take yo
 Gulp uses JavaScript and is based on node.js.
 \\
 
-It \textbf{reads files as streams} and \textbf{pipes the streams} to different tasks.
+It \textbf{reads files as streams} and \textbf{pipes the streams} to different tasks. Those tasks will then modify the files, or build news ones depending on the tasks defined.
 \\
 
-Those tasks will then modify the files, or build news ones depending on the tasks defined.
+\subsection{Using gulp in a project}
+
+gulp is just another package you can include in a project using npm.
 \\
 
+\texttt{npm gulp install}
+\\
+
+As before installing an npm package will update your \texttt{package.json} file.
+\\
+
+However just installing gulp as a plugin won't do much. Gulp needs additional packages (called \textbf{plugins}) to perform tasks.
+\\
+
+You will also need to create a file called \texttt{gulpfile.js} to make use of these plugins and define the tasks you want to run.
+\\
+
+When you want to run a task you will type something like this into your terminal:
+\\
+
+\texttt{gulp minify-css}
+
+
+\subsection{\texttt{gulpfile.js}}
+
+This is the beating heart of you rgulp set-up. The is usually split into two distinct sections.
+\\
+
+The top part is where you declare the packages needed to use in order to run your tasks. This means including gulp itself and also any plugins it needs to. It'll look something like this:
+\\
+
+	\begin{minted}{js}
+       let gulp     = require( 'gulp' );
+       let cleanCSS = require( 'gulp-clean-css' );
+       let rename   = require( 'gulp-rename' );
+	\end{minted}
+
+The rest of your \texttt{gulpfile.js} will contain the definitions of the tasks you want to run. Read on for specific examples of using these.
+\\
+
+\subsection{Minfying CSS files}
+
+Minifying CSS files (and also JS files) is something we do to improve the performance on our websites and apps. 
+\\
+
+A minified file is a file where we have stripped out all the code formatting it make it more human readable. So this means removing the spaces, line returns and comments. The file is still perfectly readable to the browser so it will run just the same.
+\\
+
+The advantage is the reduction in file size. We like reducing filesize because it means it is quicker to send to a user over the network and the knock-on effect of that is it leads to faster page loads times. And fast is good!
+\\
+
+When we use minified files in a project, we need to keep the original files so we can continue to maintain the code. Minified files are really really difficult to work with.
+\\
+
+We end up with two sets of CSS files. We will load the minified version into the project and keep the original files, known as the \textbf{source files}. 
+\\
+
+Usually we put these two different files in different directories to make it clearer which file is for what. For example we might have \texttt{/src} (short for source) and \texttt{/build} directories in our project.
+\\ 
+
+
+Here's some CSS code before minification:
+\\
+
+	\begin{minted}{css}
+
+.card-list { 
+    width: 85vw; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 20px; 
+} 
+  
+.ui-helper-hidden { 
+    display: none; 
+} 
+  
+.ui-helper-hidden-accessible { 
+    border: 0; 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+    clip: rect(0 0 0 0); 
+} 
+
+	\end{minted}
+
+And here it is after being minified (you might need to zoom in on the pdf to make this out):
+\\
+
+\img{12cm}{resources/minified-CSS-in-code editor.jpg}{1em}{Minified CSS in the code editor is displayed all on one line. Here's what I could see without scrolling.}
+
+
+
+We can write a gulp task to do this minification for us. Here's some code to do that:
+
+	\begin{minted}{js}
+1.    gulp.task( 'minify-css', () => {
+2.     return gulp.src( 'css/style.css' )
+3.      .pipe( cleanCSS( {compatibility: 'ie8'} ) )
+4.      .pipe( rename( {suffix: '.min'} ) )
+5.      .pipe( gulp.dest( './css/' ) );
+6.    } );
+
+	\end{minted}
+
+We would then run this task using \texttt{gulp minify-css} in the terminal because that is the name of the task we defined in the line 1 of the code.
+\\
+
+On line 2 we define which file we want to \textbf{pipe in} in this case \texttt{css/style.css}. Note that the path to the files is relative to the root of the project where your \textbf{gulpfile.json} should be situated.
+\\
+
+On line 3 we are saying take the piped file and run the cleanCSS function over it. The cleanCSS function comes from the \texttt{clean-CSS} plugin we required at the top of the file.
+\\
+
+On line 4 we rename the file and add a suffix (end) of \texttt{.min} to the file.
+\\
+
+And line 5 we tell gulp where we want the resulting file to be put. In this case in the \texttt{css} directory.
+\\
+
+\subsection{Compiling SASS to CSS}
+
+SASS is a language that we can use to write CSS. It is way more fun writing CSS with SASS as it gives us more features to help us make our code DRY and maintainable.
+\\
+
+For more info head to the SASS documentation, which is beautifully written. The \href{https://sass-lang.com/guide}{SASS guide} is a great read, and pretty short, to cover the basics. For more in depth help head to the \href{https://sass-lang.com/documentation}{SASS documentation}.
+\\
+
+SASS files end with \texttt{.scss} (superset of CSS, uses curly brace syntax) or \texttt{.sass} (indented syntax) and cannot be read by a browser. They must be \textbf{compiled} / \textbf{preprocessed} into CSS.
+\\
+
+There are lots of ways you can do this, gulp is but one of many options. You could even just use the npm sass package. But we like to use gulp as we can combine the compilation of your SASS with other tasks. More on this in a bit.
+\\
+
+To make a SASS task run with gulp, we will need to use the \texttt{gulp-sass} plugin as well as others. You will need to include it at the top of your \texttt{gulpfile.js} like this:
+\\
+
+	\begin{minted}{js}
+let gulp     = require( 'gulp' );
+let rename   = require( 'gulp-rename' );
+let sass = require( 'gulp-sass' );
+	\end{minted}
+
+It's the last line that is the new addition in the code example above.
+\\
+
+The task itself would look like this:
+\\
+
+	\begin{minted}{js}
+gulp.task('sass', function () {
+  return gulp.src('./scss/styles.scss')
+     .pipe(sass())
+     .pipe(rename('styles.css'))
+     .pipe(gulp.dest('./css/'));
+});
+	\end{minted}
+
+We would then run this task using \texttt{gulp sass} in the terminal.
+
+
+
+\subsection{Combining gulp tasks using \texttt{series}}
+
+So far we've just looked at running gulp tasks one at a time. MOst of the time we'll have several tasks we want to run over our files at once.
+\\
+
+For example compiling our SASS to CSS, and then minifying the resulting CSS straight after so it's production ready.
+\\
+
+Gulp allows us to combine several different tasks and use only one command to run them as a set. Handy!
+\\
+
+\texttt{gulp.series} allows us to do that. This is an in-built function of gulp so you don't need to include anything else in the top of your \textbf{gulpfile.js} to make this work.
+\\
+
+Don't forget as before, 
+
+Assuming we have two tasks already defined in our \texttt{gulpfile.js} called \texttt{sass} and \texttt{minify-sass} we could combine them together by adding this code to the end of our \texttt{gulpfile.js}:
+
+	\begin{minted}{js}
+gulp.task( 'minify-sass', gulp.series( 'sass', 'minify-css' ) );
+	\end{minted}
+
+Then on the command line we can run \texttt{minify-sass} and watch both tasks happen one after the other.
+\\
+
+
+\subsection{Running tasks automatically using \texttt{watch}}
+
+When we are developing, we'll be constantly amending our files and testing our work to make sure we've got it right. That means you might end up rebuilding your files every few minutes.
+\\
+
+Having to go back to your terminal and rerun your commands manually each time is a bit of a drag.
+\\
+
+Instead we can get gulp to \textbf{watch our files} and perform changes every time we save files. This is an incredible time saver for your workflow.
+\\
+
+\texttt{gulp.watch} allows us to do that. This is an in-built function of gulp so you don't need to include anything else in the top of your \textbf{gulpfile.js} to make this work.
+\\
+
+You can add the following code to your \textbf{gulpfile.js} to get gulp watching your file:
+
+	\begin{minted}{js}
+gulp.task( 'watch', function () {
+    return gulp.watch('scss/**/*.scss',
+       gulp.task( 'minify-sass' ) );
+} );
+	\end{minted}
+
+A word of caution! If you edit your \textbf{gulpfile.js} whilst it is running, in this case watching a task, it will keep running your old version.
+\\
+
+You need to stop gulp running using \textbf{Ctr + C} or \textbf{Apple + C} and then restart it to see your new changes take affect.
+
+\subsection{Refreshing your browser when you make changes}
+
+Another brilliantly useful task you can get gulp to run is a browser refresh task.
+\\
+
+This allows you to get your browser to automatically refresh and show you your changed output. It's definite timesaver when you are working hard on a project.
+\\ 
+
+A good gulp plugin for this is called \texttt{browser-sync}.
+\\
+
+If you need some help with implementing this have a look at our \href{https://gist.github.com/oliward/426a6a89bda3d55c614b495431290ba4}{code sample in the git repo}.
+
+
+\section{Managing build merge conflicts}
+
+When gulp, or any other task runner, is involved in creating build files you will find you frequently get merge conflicts with the built files.
+\\
+
+Taking the example of compiling SASS into CSS and then minifying it, the resulting minified CSS is likely to cause conflicts in pretty much every merge. Because a minified file is essentially one line of CSS, Git will trigger a merge conflict because from it's point of view the same lines of code have been edited.
+\\
+
+Trying to resolve a merge conflict in a minified file is a pretty horrendous job for any developer. So prone to mistakes and problems. We just wouldn't really expect someone to have to resolve this by hand.
+\\
+
+Instead, a common practice is that when you are resolving the merge conflict you just accept all the incoming changes for the CSS file and commit that. Or the original changes - it actually doesn't really matter. Once you have completed the merge you then regenerate the CSS from the source files and add that as a new commit.
+\\
+
+It is important to note that resolving merge conflicts on the source files, eg the original files is still really important and you need to pay attention. But the final build/compiled files don't require too much thought as you just regenerate them as a separate commit.
+\\
+
+There are other approaches such as never committing the final build files and have those generated on the fly when code is submitted. But those require different skills to implement Continuous Improvement (CI) or Continuous Deploymet (CD) pipelines. 
+\\
+
+As with so many things in the world of development, there are lots of ways to approach the same problems. \textbf{What is right and wrong is usually a matter of context and team culture} so our advice is to keep it practical. Get something working that solves some immediate problems for you and your team first. You can always iterate and improve any solution later down the line as you try it out and learn where the pain points are.
+\\
