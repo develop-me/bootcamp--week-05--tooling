@@ -11,7 +11,7 @@ This is an open book quiz. That means it's ok to:
 
 It's not ok to do this as a team or to share answers with each other.
 
-Send your answers to your instructor in [markdown format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and you will get a score and feedback on how you did. 
+If you want your quiz marked (entirely option) sent it to your instructor by 1pm in [markdown format](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and you will get a score and feedback on how you did. 
 
 ---
 
