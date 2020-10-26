@@ -41,4 +41,4 @@
 
 Other stuff you can do:
 * Read up about stashing in the notes and give it a whirl.
-* Read in depth about the different `git reset` flags: --hard, --mixed and --soft (Atlassian reset tutorial)[https://www.atlassian.com/git/tutorials/undoing-changes/git-reset]
+* Read in depth about the different `git reset` flags: --hard, --mixed and --soft [Atlassian reset tutorial](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)
