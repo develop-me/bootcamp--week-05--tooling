@@ -8,7 +8,7 @@
 
    `git branch -M main`
 
-1) **Set up a new project on [GitHub](https://github.com)**
+1) **Create a new repository on [GitHub](https://github.com)**
 
 1) **Define the name that your local repo uses for your new remote repository**
 
