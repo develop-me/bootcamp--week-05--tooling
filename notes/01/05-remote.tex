@@ -91,13 +91,17 @@ When we are working with remote repos, here's the series of steps that are usual
 Origin is the name of the remote repository where you want to publish you commits, as defined by you locally. This means someone else might connect to the same repo on their local machine but reference it with a different name to you.
 \\
 
-By convention the default remote repository is named \texttt{origin}, but you can work with several remotes (with different names) as the same time. It's not usually necessary to do this though as a lot the time it is just one remote repo for a project.
+By convention the default remote repository is named \texttt{origin}, but you can work with several remotes (with different names) at the same time. It's not usually necessary to do this though as a lot the time it is just one remote repo for a project.
 \\
 
 This is helpful because the other way of telling your machine where the remote repo is is by using the URL. This can be quite long like:
 \\
 
 \texttt{https://github.com/develop-me/bootcamp--week-05--tooling.git}
+\\
+
+or
+\\
 
 \texttt{git@github.com:develop-me/bootcamp--week-05--tooling.git}
 \\
@@ -118,83 +122,81 @@ There are lots of companies that provide remote repos. A few popular ones are:
 The services these providers offer is built on the workings of Git. However there may be additional services they offer such as project management tools, automated deployments and user management.
 \\
 
+A good example of a difference between Git and GitHub is the naming of the default branch. On the command line, Git names the default branch \texttt{master}. But the default branch is named \texttt{main} in GitHub.
+\\
+
 Therefore Git !== GitHub 
 \\
 
 
+\section{Connecting local and remote repos together}
 
-
-\section{Creating a new repository}
+\subsection{Creating a remote repo from an existing local repo}
 
 The steps (with no code) are as follows:
 
 \begin{itemize}
-    \item Set up project folder locally
-    \item Start version managing your folder
+    \item Set up project directory locally
+    \item Start version managing your directory and making commits
+	\item Create a new remote repo (in GitHub for example)
+	\item Check the naming of the default branch in local and remote
+	\item Change your local default branch name if necessary
     \item Add the remote repository (use git@github.com link)
-    \item Make changes
-    \item Commit changes
     \item Push changes
 \end{itemize}
 
-There can only be one first commit, so consider carefully how it is created.
-\\
-
-\begin{infobox}{Option 1: first commit on your computer - preferred method}
+\begin{infobox}{First commit is in your local repo}
 
 	\begin{enumerate}
-		\item Create your project repo on GitHub
-		\item DO NOT choose to "Initialize this repository with a README"
-		\item Locally run \texttt{git init}
-		\item Connect with GitHub with \texttt{git remote add origin {repository-URL}}
-		\item \texttt{git add {filename}}
-		\item \texttt{git commit -m "adding my first file"} - this is the first commit
-		\item \texttt{git push origin master} first commit makes it from local to the remote
+		\item Create a directory locally and initialise Git within it by running \texttt{git init}
+		\item Make your first commit locally \texttt{git add {filename}} then {git commit -m "First commit in repo"} - this is the first commit
+		\item Create your project repo on GitHub - DO NOT choose to "Initialize this repository with a README", keep the repo blank to start with
+		\item Check the names of the default branches match in your local repo and remote repo. You can use \texttt{git branch -a} to list your local branches
+		\item Rename your local branch if necessary using \texttt{git branch -M main}. Change \texttt{main} to match the name of your remote's default branch.
+		\item Use \texttt{git remote add origin {repository-URL}} to connect your local and remote repos together.
+		\item Push your first commit to the remote using \texttt{git push -u origin main}. Change \texttt{main} to match the name of your remote's default branch.
+		\item Push subsequent commits using just \texttt{git push}
 	\end{enumerate}
 \end{infobox}
 
-\textbf{Option 2: first commit on GitHub}
 
-\begin{enumerate}
-    \item Create your project repo on GitHub
-    \item Choose 'Initialize this repository with a README' \textbf{this is the first commit, adding this file on the remote}
-    \item Locally run \texttt{git init}
-    \item Connect with GitHub with \texttt{git remote add origin {repository-URL}}
-    \item \texttt{git fetch} to get information about the remote repo
-    \item \texttt{git checkout master} to checkout the first commit from GitHub (including your README.md)
-    \item Start tracking new files with \texttt{git add {filename}}
-    \item Commiting with \texttt{git commit}
-    \item Push up your work to GitHub with \texttt{git push}
-\end{enumerate}
+\subsection{Pulling down an existing repo with \texttt{git clone}}
 
-\begin{infobox}{ \texttt{git fetch} vs. \texttt{git pull}}
-    What's the difference?
-	\\
-
-    \texttt{git pull} is in effect a \texttt{git fetch} then a \texttt{git checkout}, going to the remote and fetching any changes, then applying (or checking out) those changes to your version of the files.
-\end{infobox}
-
-
-\subsection{Fewer commands with \texttt{git clone}}
-
-A great shortcut for setting up a new project folder and connecting with the remote.
+A great shortcut for setting up a new project directory and connecting with a remote repo that already exists.
 \\
 
 \begin{minted}{bash}
-    git clone \{repository URL\} \{folder to create\
+    git clone {repository URL}
 \end{minted}
-
 
 It is equivalent to running all these commands:
 
 \begin{minted}{bash}
-    mkdir {folder to create}
-    cd {folder to create}
+    mkdir {directory to create}
+    cd {directory to create}
     git init
     git remote add origin {repository URL}
     git fetch
     git checkout master
 \end{minted}
+
+Note that when you run this command, it creates a new directory and gives it the same name as your repo. All the files from your repo go inside this new directory. So make sure you run the command from the right place or you might end up with extra level of directory that gets in your way.
+\\
+
+If you want to customise the name of the directory you can do so like this:
+\\
+
+\begin{minted}{bash}
+    git clone {repository URL} {custom-directory-name}
+\end{minted}
+
+
+\begin{infobox}{ \texttt{git fetch} vs. \texttt{git pull}}
+    What's the difference?
+	\\
+
+    \texttt{git pull} is in effect a \texttt{git fetch} then a \texttt{git checkout}. It goes to the remote and fetches any new commits. It will check you out to the last commit. It will also attempt to do a merge if your commit histories are different - this can result in a \texttt{merge conflict}.
+\end{infobox}
 
 
 \section{Branches and remote repos}
