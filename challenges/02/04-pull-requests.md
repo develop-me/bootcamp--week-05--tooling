@@ -42,7 +42,7 @@ For each task use a separate feature branch, pushing it to remote, create and re
 
    Review, approve and merge the pull request
    
-   Delete the branch on remote (GitHub)
+   Delete the branch on remote (GitHub) - see advanced section at the end for how to sync your lists of branches between local and remote
 
 1) **Continue**
 
