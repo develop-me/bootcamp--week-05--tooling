@@ -1,17 +1,19 @@
 # Use gulp to compile your SASS
 
+Heads up! This challenge is a little bit harder than the others you've done far. Read the instructions carefully and have a think about what each step is asking you to do because this challenge does not tell you the exact commands to run or exact steps to take. 
+
 ## Install the needed npm packages
 
-We're going to need:
+1) Install the `gulp-sass` package into your project
 
-- gulp-sass
+2) How can you check this has worked?
 
 
 ## Edit your gulpfile.js
 
-Require the additional sass dependency at the top of your gulpfile
+1) Require the additional sass dependency at the top of your gulpfile
 
-Add the sass task:
+2) Add the sass task into the body of your `gulpfile.js`:
 
 ```javascript
 gulp.task('sass', function () {
@@ -25,10 +27,10 @@ gulp.task('sass', function () {
 
 ## Run the SASS task
 
-1) Make a change to `scss/customisations.scss`
+1) Make a change to `scss/customisations.scss` like `body{background: CornflowerBlue;}`
 1) Run `gulp sass`
 1) Verify it updated `css/styles.css` with your change
-1) Sense check that it is all working by making a change to `scss/customisations.scss`, like `body{background:red;}` then running **both** gulp tasks *in the right order* - this is key, think about what is happening to the files in our build process
+1) What gulp task do you need to run next to get the changes showing in your browser? This is key, think about what is happening to the files in our build process
 1) Verify you can see the resulting CSS change in the browser
 
 ## **Add an emoji to slack to let the instructor know you have finished**
@@ -36,8 +38,5 @@ gulp.task('sass', function () {
 
 ## Advanced
 
-1) Add more SCSS files into your project
-1) Verify their CSS is being included in `css/styles.css`
-1) Make some more pages for your site
-1) Link to them in the menu
-1) Continue to develop your site
+1) Add more SCSS files into your project and verify their CSS is being included in `css/styles.css`
+1) Read more about {SASS}(https://sass-lang.com/documentation) and have a play with some of the cool features like nesting, variables or mixins. 
