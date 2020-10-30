@@ -1,4 +1,4 @@
-# Combine then minify JS files
+# Team project
 
 You're going to build a website in teams for the rest of the week.
 
@@ -11,16 +11,15 @@ Steps:
 1) [Planning](#step-1-planning)
 1) [Getting Set Up](#step-2-getting-set-up)
 1) [Setup workflow](#step-3-setup-workflow)
-1) [GitHub Pages](#step-4-github-pages)
-1) [Best practice](#step-5-best-practice)
-1) [Minify HTML](#step-6-minify-html)
-1) [Auto-refresh browser](#step-7-auto-refresh-browser)
+1) [Best practice](#step-4-best-practice)
+1) [Minify HTML](#step-5-minify-html)
+1) [Auto-refresh browser](#step-6-auto-refresh-browser)
+1) [GitHub Pages](#step-7-github-pages)
 
 
 ## Step 1: Planning
 
 Plan your website's purpose in your team.
-
 
 ## Step 2: Getting Set Up
 
@@ -44,8 +43,6 @@ Plan your website's purpose in your team.
 
 Each person in the team can now make some changes, start using the gulp tasks, and commit and push changes to GitHub
 
-
-
 ## Step 3: Setup workflow
 
 1) Implement plugins to handle:
@@ -55,23 +52,7 @@ Each person in the team can now make some changes, start using the gulp tasks, a
 1) Set up gulp tasks to use these plugins
 1) Building a site, with a defined Git workflow using gulp
 
-
-
-## Step 4: GitHub Pages
-
-Did you know you can use GitHub to host your site?!
-
-The feature, called GitHub Pages, can be enabled by going to Settings on the project repository and choosing how you want to publish in the "GitHub Pages" section.
-
-You can publish from the master or gh-pages branch, or can have a docs/ folder where you put your built site files.
-
-You can then access your GitHub Pages hosted project at: `<username>.github.io/<repo-name>`
-
-E.g. [oliward.github.io/rainbow-drops/](https://oliward.github.io/rainbow-drops/) (try clicking on the page)
-
-
-
-## Step 5: Best practice
+## Step 4: Best practice
 
 Once you're team is up and running try to demonstrate best practice.
 
@@ -90,9 +71,7 @@ Once you're team is up and running try to demonstrate best practice.
 - Using Gitflow or other defined branching process
 - Defined roles or review process, this should also be in `README.md`, how can others contribute?
 
-
-
-## Step 6: Minify HTML
+## Step 5: Minify HTML
 
 Use a gulp plugin to remove whitespace from our HTML files to make them smaller.
 
@@ -107,18 +86,22 @@ Consider your approach, as we want to keep the original, unminified HTML too.
 ### Optional - same approach for all assets
 /src/js/scripts.js → /dist/js/scripts.min.js
 
-
-
-## Step 7: Auto-refresh browser
+## Step 6: Auto-refresh browser
 
 Look into, and implement, a gulp plugin that will auto-refresh browser when files change.
 
 Suggested plugin: [Browsersync](https://www.browsersync.io/docs/gulp).
 
-**If you get stuck with this [see Oli's sample](https://gist.github.com/oliward/426a6a89bda3d55c614b495431290ba4)**
+**If you get stuck with this [see my sample](https://gist.github.com/oliward/426a6a89bda3d55c614b495431290ba4)**
 
+## Step 7: GitHub Pages
 
+Did you know you can use GitHub to host your site?!
 
+The feature, called GitHub Pages, can be enabled by going to Settings on the project repository and choosing how you want to publish in the "GitHub Pages" section.
 
+You can publish from the master or gh-pages branch, or can have a docs/ folder where you put your built site files.
 
+You can then access your GitHub Pages hosted project at: `<username>.github.io/<repo-name>`
 
+E.g. [oliward.github.io/rainbow-drops/](https://oliward.github.io/rainbow-drops/) (try clicking on the page)
