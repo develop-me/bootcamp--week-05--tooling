@@ -39,4 +39,4 @@ gulp.task('sass', function () {
 ## Advanced
 
 1) Add more SCSS files into your project and verify their CSS is being included in `css/styles.css`
-1) Read more about {SASS}(https://sass-lang.com/documentation) and have a play with some of the cool features like nesting, variables or mixins. 
+1) Read more about [SASS](https://sass-lang.com/documentation) and have a play with some of the cool features like nesting, variables or mixins. 
