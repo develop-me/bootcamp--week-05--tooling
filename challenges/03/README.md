@@ -13,5 +13,3 @@
 1) [05-watch-task.md](05-watch-task.md)
 
 1) [06-minify-js.md](06-minify-js.md)
-
-1) [07-team-project.md](07-team-project.md)
