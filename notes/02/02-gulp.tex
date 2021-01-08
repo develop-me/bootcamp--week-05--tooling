@@ -70,7 +70,7 @@ The rest of your \texttt{gulpfile.js} will contain the definitions of the tasks 
 
 \subsection{Minfying CSS files}
 
-Minifying CSS files (and also JS files) is something we do to improve the performance on our websites and apps. 
+Minifying CSS files (and also JS files) is something we do to improve the performance on our websites and apps.
 \\
 
 A minified file is a file where we have stripped out all the code formatting it make it more human readable. So this means removing the spaces, line returns and comments. The file is still perfectly readable to the browser so it will run just the same.
@@ -82,11 +82,11 @@ The advantage is the reduction in file size. We like reducing filesize because i
 When we use minified files in a project, we need to keep the original files so we can continue to maintain the code. Minified files are really really difficult to work with.
 \\
 
-We end up with two sets of CSS files. We will load the minified version into the project and keep the original files, known as the \textbf{source files}. 
+We end up with two sets of CSS files. We will load the minified version into the project and keep the original files, known as the \textbf{source files}.
 \\
 
 Usually we put these two different files in different directories to make it clearer which file is for what. For example we might have \texttt{/src} (short for source) and \texttt{/build} directories in our project.
-\\ 
+\\
 
 
 Here's some CSS code before minification:
@@ -94,35 +94,35 @@ Here's some CSS code before minification:
 
 	\begin{minted}{css}
 
-.card-list { 
-    width: 85vw; 
-    margin: 0 auto; 
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-gap: 20px; 
-} 
-  
-.ui-helper-hidden { 
-    display: none; 
-} 
-  
-.ui-helper-hidden-accessible { 
-    border: 0; 
-    height: 1px; 
-    margin: -1px; 
-    overflow: hidden; 
-    padding: 0; 
-    position: absolute; 
-    width: 1px; 
-    clip: rect(0 0 0 0); 
-} 
+.card-list {
+    width: 85vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.ui-helper-hidden {
+    display: none;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(0 0 0 0);
+}
 
 	\end{minted}
 
 And here it is after being minified (you might need to zoom in on the pdf to make this out):
 \\
 
-\img{12cm}{resources/minified-CSS-in-code editor.jpg}{1em}{Minified CSS in the code editor is displayed all on one line. Here's what I could see without scrolling.}
+\img{12cm}{resources/minified-CSS-in-code-editor.jpg}{1em}{Minified CSS in the code editor is displayed all on one line. Here's what I could see without scrolling.}
 
 
 
@@ -209,7 +209,7 @@ Gulp allows us to combine several different tasks and use only one command to ru
 \texttt{gulp.series} allows us to do that. This is an in-built function of gulp so you don't need to include anything else in the top of your \textbf{gulpfile.js} to make this work.
 \\
 
-Don't forget as before, 
+Don't forget as before,
 
 Assuming we have two tasks already defined in our \texttt{gulpfile.js} called \texttt{sass} and \texttt{minify-sass} we could combine them together by adding this code to the end of our \texttt{gulpfile.js}:
 
@@ -255,7 +255,7 @@ Another brilliantly useful task you can get gulp to run is a browser refresh tas
 \\
 
 This allows you to get your browser to automatically refresh and show you your changed output. It's definite timesaver when you are working hard on a project.
-\\ 
+\\
 
 A good gulp plugin for this is called \texttt{browser-sync}.
 \\
@@ -295,7 +295,7 @@ Instead, a common practice is that when you are resolving the merge conflict you
 It is important to note that resolving merge conflicts on the source files, eg the original files is still really important and you need to pay attention. But the final build/compiled files don't require too much thought as you just regenerate them as a separate commit.
 \\
 
-There are other approaches such as never committing the final build files and have those generated on the fly when code is submitted. But those require different skills to implement Continuous Improvement (CI) or Continuous Deploymet (CD) pipelines. 
+There are other approaches such as never committing the final build files and have those generated on the fly when code is submitted. But those require different skills to implement Continuous Improvement (CI) or Continuous Deploymet (CD) pipelines.
 \\
 
 As with so many things in the world of development, there are lots of ways to approach the same problems. \textbf{What is right and wrong is usually a matter of context and team culture} so our advice is to keep it practical. Get something working that solves some immediate problems for you and your team first. You can always iterate and improve any solution later down the line as you try it out and learn where the pain points are.
