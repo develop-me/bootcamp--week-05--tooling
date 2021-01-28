@@ -13,5 +13,5 @@ Tooling: doing things better, faster, smarter
 	- [Demo](https://github.com/develop-me/gulp-demo)
 	- [Project template](https://github.com/develop-me/gulp-template)
 	- [Challenges](challenges/03/README.md)
-- Day 4: Group Project
+- Day 4: [Group Project](challenges/04/01-group-project.md)
 - Day 5: [Quiz](quiz/README.md)

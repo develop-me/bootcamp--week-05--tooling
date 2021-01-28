@@ -20,13 +20,35 @@ The power of branches are incredibly useful for:
     \item Trial and experiment
 \end{itemize}
 
-\subsection{The master branch}
+\subsection{The default branch}
 
-When you run \texttt{git init} Git automatically creates your first branch and it is called the \textbf{master branch}.
+When you run \texttt{git init} Git automatically creates your first branch, known as the default branch.
 \\
 
-The master branch is typically considered the version of your code that is production ready. In fact an identical copy of your master branch is usually what will be running on a live site or in a live app. More on Git workflows later.
+The default branch is typically considered the version of your code that is production ready. In fact an identical copy of your default branch is usually what's running on a live site or in a live app. More on Git workflows later.
 \\
+
+The default branch will have a name. When you use Git in the terminal the default branch is called \texttt{master}.
+\\
+
+But when you create a new repo in GitHub, the default branch is called \texttt{main}.
+\\
+
+The default branch name can be changed by running \texttt{git branch -M new-branch-name} from the default branch. Note that you need to have made at least one commit in the default branch to be able to rename it.
+\\
+
+\subsection{Why does the default branch have different names?}
+
+In summer 2020, the Black Lives Matters movement prompted the tech community as a whole to review its practices to change the systems that cause inequalities across society.
+\\
+
+One of the outcomes of this consideration, was feedback that the default branch should not be called \texttt{master} as many considered the word an oppresive term for black communities.
+\\
+
+As a result, some tech communities have begun transitioning away from \texttt{master} as the default name.
+\\
+
+You can read more about GitHub's decision here: \href{https://www.vice.com/en/article/k7qbyv/github-to-remove-masterslave-terminology-from-its-platform}{Github to remove master-slave terminology from its platform}.
 
 \section{Commands for working with branches}
 
